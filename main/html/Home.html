@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<title>GTG Main</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="../../common/css/common.css"/>
+    <!-- js -->
+	<script type="text/javascript" src="../../common/js/common.js"></script>
+<body>
+    <!-- 헤더 -->
+	<header>
+		<div class="headerBox">
+			<div class="svg_default topLogo"></div>
+			<div class="bold_14px black">Guest</div>
+		</div>
+    </header>
+
+    <!-- 메인 콘텐츠 -->
+    <main>
+		 <!-- Left 메뉴 -->
+		 <nav class="leftMenuBox">
+            <ul>
+                <li><a href="#" class="medium_16px">홈</a></li>
+                <li><a href="#" class="medium_16px">시청할 영상</a></li>
+                <li><a href="#" class="medium_16px">내 영상</a></li>
+                <li><a href="#" class="medium_16px">내 정보</a></li>
+            </ul>
+        </nav>
+
+        <section class="div-scroll-y homeBox">
+			<div class="bold_32px">GTG 홈</div>
+			<article>
+				<img src="../../common/img/main1.png" alt="Image 1">
+				<img src="../../common/img/main2.png" alt="Image 2">
+				<img src="../../common/img/main3.png" alt="Image 3">
+
+			</article>
+        </section>
+    </main>
+	<script>
+        // 문서가 로드된 후 실행할 코드
+        document.addEventListener('DOMContentLoaded', function() {
+            // common.js에서 정의한 함수 호출
+            setupMenuClickHandler('.leftMenuBox ul li');
+        });
+    </script>
+ 
+</body>
+</html>

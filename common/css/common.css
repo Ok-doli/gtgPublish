@@ -1,0 +1,530 @@
+:root {
+    --sat: env(safe-area-inset-top);
+    --sar: env(safe-area-inset-right);
+    --sab: env(safe-area-inset-bottom);
+    --sal: env(safe-area-inset-left);
+    
+}
+ @font-face {
+    font-family: "Noto Sans Korean";
+    font-weight: 100;
+    font-style: normal;
+    src: url("../fonts/NotoSans-Thin.eot?") format("eot"),
+    url("../fonts/NotoSans-Thin.otf") format("opentype"),
+    url("../fonts/NotoSans-Thin.woff") format("woff"),
+    url("../fonts/NotoSans-Thin.woff2") format("woff2");
+  }
+  
+  @font-face {
+    font-family: "Noto Sans Korean";
+    font-weight: 200;
+    font-style: normal;
+    src: url("../fonts/NotoSans-Light.eot?") format("eot"),
+    url("../fonts/NotoSans-Light.otf") format("opentype"),
+    url("../fonts/NotoSans-Light.woff") format("woff"),
+    url("../fonts/NotoSans-Light.woff2") format("woff2");
+  }
+  
+  @font-face {
+    font-family: "Noto Sans Korean";
+    font-weight: 300;
+    font-style: normal;
+    src: url("../fonts/NotoSans-DemiLight.eot?") format("eot"),
+    url("../fonts/NotoSans-DemiLight.otf") format("opentype"),
+    url("../fonts/NotoSans-DemiLight.woff") format("woff"),
+    url("../fonts/NotoSans-DemiLight.woff2") format("woff2");
+  }
+  
+  @font-face {
+    font-family: "Noto Sans Korean";
+    font-weight: 400;
+    font-style: normal;
+    src: url("../fonts/NotoSans-Regular.eot?") format("eot"),
+    url("../fonts/NotoSans-Regular.otf") format("opentype"),
+    url("../fonts/NotoSans-Regular.woff") format("woff"),
+    url("../fonts/NotoSans-Regular.woff2") format("woff2");
+  }
+  
+  @font-face {
+    font-family: "Noto Sans Korean";
+    font-weight: 500;
+    font-style: normal;
+    src: url("../fonts/NotoSans-Medium.eot?") format("eot"),
+    url("../fonts/NotoSans-Medium.otf") format("opentype"),
+    url("../fonts/NotoSans-Medium.woff") format("woff"),
+    url("../fonts/NotoSans-Medium.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "Noto Sans Korean";
+    font-weight: 700;
+    font-style: normal;
+    src: url("../fonts/NotoSans-Black.eot?") format("eot"),
+    url("../fonts/NotoSans-Black.otf") format("opentype"),
+    url("../fonts/NotoSans-Black.woff") format("woff"),
+    url("../fonts/NotoSans-Black.woff2") format("woff2");
+  }
+  
+  @font-face {
+    font-family: "Noto Sans Korean";
+    font-weight: 900;
+    font-style: normal;
+    src: url("../fonts/NotoSans-Bold.eot?") format("eot"),
+    url("../fonts/NotoSans-Bold.otf") format("opentype"),
+    url("../fonts/NotoSans-Bold.woff") format("woff"),
+    url("../fonts/NotoSans-Bold.woff2") format("woff2");
+  }
+
+input, textarea, button {
+    appearance: none !important;
+    -moz-appearance: none !important;
+    -webkit-appearance: none !important;
+    border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+}
+Button, html [type="button"] {
+  -webkit-appearance: none !important;
+}
+    /* Bold 스타일 */
+    .bold_14px {
+    font-family: "Noto Sans Korean";
+    font-weight: 900; /* Bold */
+    font-size: 14px;
+  }
+  
+  .bold_16px {
+    font-family: "Noto Sans Korean";
+    font-weight: 900; /* Bold */
+    font-size: 16px;
+  }
+  
+  .bold_20px {
+    font-family: "Noto Sans Korean";
+    font-weight: 900; /* Bold */
+    font-size: 20px;
+  }
+  
+  .bold_32px {
+    font-family: "Noto Sans Korean";
+    font-weight: 900; /* Bold */
+    font-size: 32px;
+  }
+  
+  /* Medium 스타일 */
+  .medium_16px {
+    font-family: "Noto Sans Korean";
+    font-weight: 500; /* Medium */
+    font-size: 16px;
+  }
+  
+  /* DemiLight 스타일 */
+  .demiLight_14px {
+    font-family: "Noto Sans Korean";
+    font-weight: 300; /* DemiLight */
+    font-size: 14px;
+  }
+  
+  /* Regular 스타일 */
+  .regular_14px {
+    font-family: "Noto Sans Korean";
+    font-weight: 400; /* Regular */
+    font-size: 14px;
+  }
+  
+  .regular_16px {
+    font-family: "Noto Sans Korean";
+    font-weight: 400; /* Regular */
+    font-size: 16px;
+  }
+  
+  .regular_12px {
+    font-family: "Noto Sans Korean";
+    font-weight: 400; /* Regular */
+    font-size: 12px;
+  }
+  
+
+/* 전체 요소에 적용될 스타일 */
+* {
+    margin: 0px;
+	padding: 0px;
+    font-family: "Noto Sans Korean", sans-serif; 
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	text-align: center;
+    -ms-content-zooming: none;
+    -ms-touch-action: pan-x pan-y;
+    user-select: none;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-moz-none: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	user-select: none;
+    overflow: hidden;
+}
+
+
+
+
+/* Color Set */
+:root {
+    /* 기본 색상 */
+    --Color-White: #FFFFFF;
+    --Color-Black: #000000;
+    --Color-Main-Black: #141519;
+
+    /* 회색 계열 */
+    --Color-Light-Gray-1: #DADADA;
+    --Color-Light-Gray-2: #D9D9D9;
+    --Color-Medium-Gray: #999999;
+    --Color-Dark-Gray: #30374D;
+    --Color-Darker-Gray: #555555;
+    --Color-Black-Gray: #0E0E0E;
+
+    /* 기타 색상 */
+    --Color-Purple: #AE8CE8;
+    --Color-Light-Blue: #EFF5F8;
+    --Color-Blue: #287EFC;
+
+    /* 버튼 색상 */
+    --Button-White: #FFFFFF;
+    --Button-White-Line: #B2B5BF;
+    --Button-Black-Background: #30374D;
+    --Button-Gray-Background: #D9D9D9;
+}
+/* 기본 색상 변수 정의 */
+:root {
+    --Color-White: #FFFFFF;
+    --Color-Black: #000000;
+
+    --Color-Main-Black: #141519;
+    --Color-Main-Purple: #AE8CE8;
+    --Color-Main-Blue: #287EFC; 
+
+    --Color-Gray-100: #DADADA;
+    --Color-Gray-200: #D9D9D9;
+    --Color-Gray-300: #999999;
+    --Color-Gray-400: #30374D;
+    --Color-Gray-500: #555555;
+    --Color-Gray-600: #0E0E0E;
+
+    --Color-Blue-100: #EFF5F8;
+}
+
+/* 색상 클래스 정의 */
+
+.white {
+    color: var(--Color-Main-Black);
+}
+.black {
+    color: var(--Color-Main-Black);
+}
+/* 주 색상 */
+.mainBlack {
+    color: var(--Color-Main-Black);
+}
+
+.mainPurple {
+    color: var(--Color-Main-Purple);
+}
+
+.mainBlue {
+    color: var(--Color-Main-Blue-200);
+}
+
+/* 회색 계열 */
+.gray100 {
+    color: var(--Color-Gray-100);
+}
+
+.gray200 {
+    color: var(--Color-Gray-200);
+}
+
+.gray300 {
+    color: var(--Color-Gray-300);
+}
+
+.gray400 {
+    color: var(--Color-Gray-400);
+}
+
+.gray500 {
+    color: var(--Color-Gray-500);
+}
+
+.gray600 {
+    color: var(--Color-Gray-600);
+}
+
+/* 파란색 계열 */
+.blue100 {
+    color: var(--Color-Blue-100);
+}
+
+/* 기본 PC 크기 (1281px 이상) */
+@media (min-width: 1281px) {
+    .bold_14px {
+        font-size: 14px;
+    }
+    .bold_16px {
+        font-size: 16px;
+    }
+    .bold_20px {
+        font-size: 20px;
+    }
+    .bold_32px {
+        font-size: 32px;
+    }
+    .medium_16px {
+        font-size: 16px;
+    }
+    .demiLight_14px {
+        font-size: 14px;
+    }
+    .regular_14px {
+        font-size: 14px;
+    }
+    .regular_16px {
+        font-size: 16px;
+    }
+    .regular_12px {
+        font-size: 12px;
+    }
+    .icon_12px {
+        width: 12px;
+        height: 12px;
+    }
+    .icon_24px {
+        width: 24px;
+        height: 24px;
+    }
+    .icon_32px {
+        width: 32px;
+        height: 32px;
+    }
+    .icon_84px {
+        width: 84px;
+        height: 84px;
+    }
+    .topLogo{
+        width: 96px;
+        height: 34px;
+    }
+}
+
+/* 태블릿 크기 (768px 이상 1280px 이하) */
+@media (min-width: 768px) and (max-width: 1280px) {
+    .bold_14px {
+        font-size: 13px;
+    }
+    .bold_16px {
+        font-size: 15px;
+    }
+    .bold_20px {
+        font-size: 18px;
+    }
+    .bold_32px {
+        font-size: 24px;
+    }
+    .medium_16px {
+        font-size: 15px;
+    }
+    .demiLight_14px {
+        font-size: 13px;
+    }
+    .regular_14px {
+        font-size: 13px;
+    }
+    .regular_16px {
+        font-size: 15px;
+    }
+    .regular_12px {
+        font-size: 12px;
+    }
+    .icon_12px {
+        width: 10px;
+        height: 10px;
+    }
+    .icon_24px {
+        width: 20px;
+        height: 20px;
+    }
+    .icon_32px {
+        width: 24px;
+        height: 24px;
+    }
+    .icon_84px {
+        width: 60px;
+        height: 60px;
+    }
+    .topLogo{
+        width: 96px;
+        height: 34px;
+    }
+}
+
+/* 일반 핸드폰 크기 (767px 이하) */
+@media (max-width: 767px) {
+    .bold_14px {
+        font-size: 12px;
+    }
+    .bold_16px {
+        font-size: 14px;
+    }
+    .bold_20px {
+        font-size: 16px;
+    }
+    .bold_32px {
+        font-size: 20px;
+    }
+    .medium_16px {
+        font-size: 14px;
+    }
+    .demiLight_14px {
+        font-size: 12px;
+    }
+    .regular_14px {
+        font-size: 12px;
+    }
+    .regular_16px {
+        font-size: 14px;
+    }
+    .regular_12px {
+        font-size: 12px;
+    }
+    .icon_12px {
+        width: 8px;
+        height: 8px;
+    }
+    .icon_24px {
+        width: 16px;
+        height: 16px;
+    }
+    .icon_32px {
+        width: 20px;
+        height: 20px;
+    }
+    .icon_84px {
+        width: 40px;
+        height: 40px;
+    }
+    .topLogo{
+        width: 96px;
+        height: 34px;
+    }
+}
+
+/*공통*/
+.svg_default {
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+	display: inline-block;
+	vertical-align: middle;
+}
+/* 스크롤바*/
+.div-scroll-y {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+ }
+  
+/* 스크롤바 숨기기 - 테스트에서는 영역 봐야해서 우선은 주석 처리*/
+.div-scroll-y::-webkit-scrollbar {
+    /*display: none; /* Chrome, Safari, Opera*/
+}
+
+/*header*/
+.topLogo {
+    background-image: url("../icon/topLogo.svg");
+}
+header{
+    background-color: var(--Color-White);
+}
+.headerBox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 12px;
+    border-bottom: 1px solid var(--Color-Gray-200) ;
+}
+
+/*left menu*/
+
+ /* Left 메뉴 스타일 */
+.leftMenuBox {
+    background-color: var(--Color-Blue-100);
+    width: 200px;
+    height: 100vh;
+    padding: 32px  0px 0px 12px;
+    box-sizing: border-box;
+}
+
+.leftMenuBox ul {
+    list-style-type: none;
+}
+
+.leftMenuBox ul li {
+    margin: 15px 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.leftMenuBox ul li a {
+    color: var(--Color-Gray-500);
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* 클릭된 메뉴 스타일 */
+.leftMenuBox ul li.active {
+    background-color: var(--Color-White);
+    border-left: 3px solid  var(--Color-Main-Blue);;
+}
+
+.leftMenuBox ul li.active a {
+    color: var(--Color-Main-Blue);
+}
+
+/*main*/
+main{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+main >section{
+    width: -webkit-fill-available;
+    height: 100vh;
+}
+
+/*home*/
+.homeBox{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px 0 0 40px;
+}
+
+.homeBox > article{
+    background-color: var(--Color-Main-Black);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px; /* 이미지 간격 조정 */
+    box-sizing: border-box;
+}
+.homeBox > article > img {
+    flex: 1 1 auto; /* 가로 크기를 자동으로 조절 */
+    max-width: 100%; /* 이미지의 최대 너비를 부모 요소의 너비로 제한 */
+    height: auto; /* 이미지 비율 유지 */
+    object-fit: cover; /* 이미지의 비율을 유지하면서 부모 요소에 맞게 크기 조절 */
+}
