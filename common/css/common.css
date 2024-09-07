@@ -123,6 +123,13 @@ Button, html [type="button"] {
     font-weight: 300; /* DemiLight */
     font-size: 14px;
   }
+
+  /* DemiLight 스타일 */
+  .demiLight_16px {
+    font-family: "Noto Sans Korean";
+    font-weight: 300; /* DemiLight */
+    font-size: 16px;
+  }  
   
   /* Regular 스타일 */
   .regular_14px {
@@ -167,7 +174,7 @@ html, body {
 	-webkit-user-select: none;
 	-khtml-user-select: none;
 	user-select: none;
-    overflow: hidden;
+    /* overflow: hidden; 2024-09-07 임시 주석 */
 }
 
 
@@ -181,8 +188,10 @@ html, body {
     --Color-Main-Black: #141519;
 
     /* 회색 계열 */
-    --Color-Light-Gray-1: #DADADA;
+    --Color-Light-Gray-1: #F8F9FC;
     --Color-Light-Gray-2: #D9D9D9;
+    --Color-Light-Gray-3: #DBDBDB;
+    --Color-Light-Gray-4: #DADADA;
     --Color-Medium-Gray: #999999;
     --Color-Dark-Gray: #30374D;
     --Color-Darker-Gray: #555555;
@@ -207,13 +216,14 @@ html, body {
     --Color-Main-Black: #141519;
     --Color-Main-Purple: #AE8CE8;
     --Color-Main-Blue: #287EFC; 
-
-    --Color-Gray-100: #DADADA;
-    --Color-Gray-200: #D9D9D9;
-    --Color-Gray-300: #999999;
-    --Color-Gray-400: #30374D;
-    --Color-Gray-500: #555555;
-    --Color-Gray-600: #0E0E0E;
+    --Color-Gray-100: #F8F9FC;
+    --Color-Gray-200: #DADADA;
+    --Color-Gray-300: #D9D9D9;
+    --Color-Gray-400: #DBDBDB;
+    --Color-Gray-500: #999999;
+    --Color-Gray-600: #555555;
+    --Color-Gray-700: #30374D;
+    --Color-Gray-800: #0E0E0E;
 
     --Color-Blue-100: #EFF5F8;
 }
@@ -262,6 +272,14 @@ html, body {
 
 .gray600 {
     color: var(--Color-Gray-600);
+}
+
+.gray700 {
+    color: var(--Color-Gray-700);
+}
+
+.gray800 {
+    color: var(--Color-Gray-800);
 }
 
 /* 파란색 계열 */
@@ -454,7 +472,7 @@ header{
     align-items: center;
     justify-content: space-between;
     padding: 12px 12px;
-    border-bottom: 1px solid var(--Color-Gray-200) ;
+    border-bottom: 1px solid var(--Color-Gray-300) ;
 }
 
 /*left menu*/
@@ -479,7 +497,7 @@ header{
 }
 
 .leftMenuBox ul li a {
-    color: var(--Color-Gray-500);
+    color: var(--Color-Gray-800);
     text-decoration: none;
     display: block;
     text-align: left;
@@ -527,4 +545,140 @@ main >section{
     max-width: 100%; /* 이미지의 최대 너비를 부모 요소의 너비로 제한 */
     height: auto; /* 이미지 비율 유지 */
     object-fit: cover; /* 이미지의 비율을 유지하면서 부모 요소에 맞게 크기 조절 */
+}
+
+/* videos */
+.watchVideo {
+    padding: 20px;
+    margin-left: 13px;
+}
+
+.watchVideo * {
+    text-align: left;
+}
+
+.watchVideo .topContent .top-title {
+    display : flex;
+    margin: 0;
+}
+.watchVideo .topContent .top-subtitle {
+    display : flex;
+    color: var(--Color-Gray-800);
+    margin: 0;
+}
+
+.watchVideo .topContent {
+    display: flex;
+    align-items: baseline;
+}
+
+.watchVideo .topContent .top-title {
+    margin-right: 19px; 
+}
+
+.watchVideo .midContent {
+    margin-top: 32px;
+    padding: 10px 20px;
+    background-color: var(--Color-Gray-100);
+    border-top: 1px solid var(--Color-Gray-700);
+    border-bottom: 1px solid var(--Color-Gray-300);
+}
+.watchVideo .midContent .mid-title {
+    margin-bottom: 13px;
+}
+
+.watchVideo .midContent .mid-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.watchVideo .midContent .mid-list li {
+    color: var(--Color-Gray-600);
+}
+
+.watchVideo .midContent .mid-list li span{
+    color: var(--Color-Black);
+}
+
+.mid-list li::before {
+    content: url("../icon/checkIcon.svg");
+    font-weight: bold;
+    color: var(--Color-Black);
+    background-color: var(--Color-Gray-100);
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+.watchVideo .midContent ul li a {
+    color: var(--Color-Main-Blue);
+    text-decoration: none;
+}
+
+/* videoList 테이블 스타일 */
+.watchVideo .videoList {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 35px;
+}
+
+.watchVideo .videoList th, .videoList td {
+    border: 1px solid var(--Color-Gray-300);
+    border-right: none; /* 세로선 제거 */
+    border-left: none;  /* 세로선 제거 */
+    border-top: 1px solid var(--Color-Gray-700);
+    padding: 12px;
+    text-align: center;
+}
+
+.watchVideo .videoList th {
+    background-color: var(--Color-Light-Gray-1);
+}
+
+.watchVideo .videoList td {
+    vertical-align: top;
+    height: auto; /* 이미지 사이즈에 맞춰서 높이 자동 조절 */
+}
+
+.watchVideo .videoList td img {
+    flex: 1 1 auto; /* 가로 크기를 자동으로 조절 */
+    max-width: 100%; /* 이미지의 최대 너비를 부모 요소의 너비로 제한 */
+    height: auto; /* 이미지 비율 유지 */
+    object-fit: cover; /* 이미지의 비율을 유지하면서 부모 요소에 맞게 크기 조절 */
+}
+
+.watchVideo .button-watch {
+    background-color: var(--Button-Black-Background);
+    color: var(--Color-White);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px !important;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.watchVideo .points-text {
+    color: var(--Color-Medium-Gray);
+    clear: both; /* 텍스트를 버튼 아래로 배치 */
+    margin-top: 5px; /* 텍스트와 버튼 사이 간격 */
+}
+
+/* 버튼 및 텍스트 정렬 */
+.watchVideo .videoList .points-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.watchVideo .center-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.watchVideo .center-button button {
+    padding: 10px 20px;
+    background-color: var(--Button-White);
+    border: 1px solid var(--Button-White-Line);
+    color: var(--Color-Black);
+    cursor: pointer;
+    border-radius: 8px !important;
 }
