@@ -637,6 +637,7 @@ main >section{
 .watchVideo .videoList td {
     vertical-align: top;
     height: auto; /* 이미지 사이즈에 맞춰서 높이 자동 조절 */
+    color: var(--Color-Gray-600);
 }
 
 .watchVideo .videoList td img {
@@ -657,7 +658,7 @@ main >section{
 }
 
 .watchVideo .points-text {
-    color: var(--Color-Medium-Gray);
+    color: var(--Color-Gray-600);
     clear: both; /* 텍스트를 버튼 아래로 배치 */
     margin-top: 5px; /* 텍스트와 버튼 사이 간격 */
 }
