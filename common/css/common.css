@@ -75,15 +75,14 @@
   }
 
 input, textarea, button {
-    appearance: none !important;
-    -moz-appearance: none !important;
-    -webkit-appearance: none !important;
-    border-radius: 0 !important;
-    -webkit-border-radius: 0 !important;
-    -moz-border-radius: 0 !important;
+    appearance: none;
+    -moz-appearance: none ;
+    -webkit-appearance: none ;
+    border-radius: 0 ;
+    -moz-border-radius: 0 ;
 }
 Button, html [type="button"] {
-  -webkit-appearance: none !important;
+  -webkit-appearance: none ;
 }
     /* Bold 스타일 */
     .bold_14px {
@@ -174,6 +173,7 @@ html, body {
 	-webkit-user-select: none;
 	-khtml-user-select: none;
 	user-select: none;
+    background-color: var(--Color-Light-Blue);
     /* overflow: hidden; 2024-09-07 임시 주석 */
 }
 
@@ -245,10 +245,6 @@ html, body {
     color: var(--Color-Main-Purple);
 }
 
-.mainBlue {
-    color: var(--Color-Main-Blue-200);
-}
-
 /* 회색 계열 */
 .gray100 {
     color: var(--Color-Gray-100);
@@ -316,9 +312,14 @@ html, body {
     .regular_12px {
         font-size: 12px;
     }
+    
     .icon_12px {
         width: 12px;
         height: 12px;
+    }
+    .icon_20px {
+        width: 20px;
+        height: 20px;
     }
     .icon_24px {
         width: 24px;
@@ -336,6 +337,8 @@ html, body {
         width: 96px;
         height: 34px;
     }
+
+    
 }
 
 /* 태블릿 크기 (768px 이상 1280px 이하) */
@@ -370,6 +373,10 @@ html, body {
     .icon_12px {
         width: 10px;
         height: 10px;
+    }
+    .icon_20px {
+        width: 18px;
+        height: 18px;
     }
     .icon_24px {
         width: 20px;
@@ -421,6 +428,10 @@ html, body {
     .icon_12px {
         width: 8px;
         height: 8px;
+    }
+    .icon_20px {
+        width: 14px;
+        height: 14px;
     }
     .icon_24px {
         width: 16px;
@@ -682,4 +693,120 @@ main >section{
     color: var(--Color-Black);
     cursor: pointer;
     border-radius: 8px !important;
+}
+
+
+
+.pop{
+    margin: 74px 0 0 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.pop > section{
+    background-color: var(--Color-White);
+    width: auto;
+    height: auto;
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+}
+.pop input[type="text"]::placeholder,
+.pop input[type="password"]::placeholder {
+    text-align: left;
+    color: var(--Color-Gray-600);
+}
+
+/* input 스타일 */
+.pop input[type="text"],
+.pop input[type="password"] {
+    border: 1px solid var(--Color-Gray-400);
+    width: -webkit-fill-available;
+    border-radius: 8px;
+    padding: 12px 8px;
+    text-align: left;
+}
+.memberJoinPop > .popHeader{
+    border-bottom: 1px solid var(--Color-Dark-Gray);
+    padding: 4px 0;
+}
+
+.memberJoinPop > .popBody{
+    padding: 24px 0 ;
+    border-bottom: 1px solid var(--Color-Gray-400);
+}
+
+ /* 첫 번째 요소의 margin 제거 */
+.memberJoinPop > .popBody > div:first-child {
+    margin: 0;
+}
+.memberJoinPop > .popBody > div{
+    margin: 20px 0 0 0;
+}
+.memberJoinPop > .popBody > div > .regular_12px{
+    text-align: left;
+}
+
+.memberJoinPop > .popfooter {
+     margin: 34px 0 0 0;
+ }
+.memberJoinPop > .popfooter a{
+   color: var(--Color-Blue);
+}
+.memberJoinPop > .popfooter div{
+    margin-bottom: 12px;
+ }
+.memberJoinPop  > .popfooter .checkDiv{
+    display: flex;
+    align-items: flex-start;
+}
+
+.memberJoinPop > .popfooter >.checkDiv  div {
+    text-align: left;
+    margin-left: 8px;
+}
+
+
+
+/* 기본 상태 (체크되지 않았을 때) */
+input[type="checkbox"] {
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* 체크박스가 선택되었을 때 */
+input[type="checkbox"]:checked {
+    background-color: var(--Color-Blue);
+    background-image: url('../icon/checkBoxIcon.svg'); /* 체크 아이콘 이미지 경로 */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* 체크박스가 체크되지 않았을 때 */
+input[type="checkbox"]:not(:checked) {
+    background-color: var(--Button-White); /* 기본 배경 색상 */
+    border: 1px solid var(--Color-Gray-400); /* 기본 테두리 색상 */
+}
+
+/* 체크박스가 체크되지 않았을 때 */
+input[type="checkbox"]:not(:checked) {
+    background-color: var(--Button-White); /* 기본 배경 색상 */
+    border: 1px solid var(--Color-Gray-400); /* 기본 테두리 색상 */
+}
+
+
+.button-Blue{
+    width: -webkit-fill-available;
+    padding: 12px;
+    border-radius: 8px;
+    border: 0px;
+    color: var(--Color-White);
+    background-color: var(--Color-Blue);
+}
+
+.button-Blue:active {
+    background-color: var(--Color-Blue-100); /* 클릭 시 진한 배경색 */
 }

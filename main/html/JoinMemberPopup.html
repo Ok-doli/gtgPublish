@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<title>JoinMemberPopup</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="../../common/css/common.css"/>
+    <!-- js -->
+	<script type="text/javascript" src="../../common/js/common.js"></script>
+<body>
+    <!-- 메인 콘텐츠 -->
+    <main class="pop">
+        <!-- 신청자 정보 입력 -->
+        <section class="memberJoinPop">
+            <article class="popHeader">
+                <div class="regular_14px black">GTG 기본 회원 가입 신청을 위한 정보 입력 페이지 입니다.</div>
+                <div class="bold_32px black">신청자 정보 입력</div>
+            </article>
+            <article class="popBody">
+                <div>
+                    <input type="text" class="" placeholder="아이디"/>
+                </div>
+                <div>
+                    <input type="password"  class="" placeholder="패스워드" />
+                    <div class="regular_12px gray600">※ 6자 이상(필수), 영문/숫자/특수기호를 혼합한 비밀번호로 보안을 높이세요</div>
+                </div>
+                <div>
+                    <input type="password" class="" placeholder="패스워드 재입력" />
+                </div>
+                <div>
+                    <input type="text" class="" placeholder="이메일" />
+                </div>
+                <div>
+                    <input type="text" class="" placeholder="휴대전화번호"/>
+                </div>
+                <div>
+                    <input type="text" class="" placeholder="https://www.youtube.com/@유튜브채널ID"/>
+                    <div class="regular_12px gray600">※ https://www.youtube.com/@abcd 형식이어야 합니다.</div>
+                </div>
+            </article>
+            <article class="popfooter">
+                <div class="checkDiv">
+                    <input class="icon_20px"  type="checkbox">
+                    <div class="regular_16px black">   
+                        입력된 정보와 실제 계정의 사용자가 다른 경우 발생하는 문제에 대해서
+                        <br>
+                        <a class="medium_16px blue100"> GTG system </a>보안규정에 따라 민,형사상의 모든 책임을 지는 것에 동의합니다.
+                    </div>
+                </div>
+                <div>
+                    <input class="bold_16px button-Blue" type="button" value="회원가입" />
+                </div>
+                <div>
+                    <a href="#"></a>
+                </div>
+            </article>
+        </section>
+
+    </main>
+	<script>
+        // 문서가 로드된 후 실행할 코드
+        document.addEventListener('DOMContentLoaded', function() {
+            // common.js에서 정의한 함수 호출
+            setupMenuClickHandler('.leftMenuBox ul li');
+        });
+    </script>
+ 
+</body>
+</html>
