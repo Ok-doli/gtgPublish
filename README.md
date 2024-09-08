@@ -1,3 +1,23 @@
+## 2024-09-08
+### 수정 사항 : 공통 CSS
+-아래의 코드 !important; 제거 및 파란색 체크박스 css 공통 삽입 , button-Blue 공통 파란색 버튼 생성
+
+input, textarea, button {
+    appearance: none !important;
+    -moz-appearance: none !important;
+    -webkit-appearance: none !important;
+    border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+
+}
+
+Button, html [type="button"] {
+  -webkit-appearance: none !important;
+}
+
+### 이슈
+
 ## 2024-09-07  
 ### 수정 사항 : 공통 CSS
 
