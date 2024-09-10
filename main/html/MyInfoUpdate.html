@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>GTG Main</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- css -->
+<link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
+<!-- js -->
+<script type="text/javascript" src="../../common/js/common.js"></script>
+
+<body>
+    <!-- 헤더 -->
+    <header>
+        <div class="headerBox">
+            <div class="svg_default topLogo"></div>
+            <div class="bold_14px black">Guest</div>
+        </div>
+    </header>
+
+    <!-- 메인 콘텐츠 -->
+    <main>
+        <!-- Left 메뉴 -->
+        <nav class="leftMenuBox">
+            <ul>
+                <li><a href="#" class="medium_16px">홈</a></li>
+                <li><a href="#" class="medium_16px">시청할 영상</a></li>
+                <li><a href="#" class="medium_16px">내 영상</a></li>
+                <li><a href="#" class="medium_16px">내 정보</a></li>
+            </ul>
+        </nav>
+
+        <!-- 내 정보 수정 섹션 -->
+        <section class="myInfo">
+            <div class="topContent">
+                <div class="bold_32px top-title">내 정보</div>
+                <div class="regular_14px top-subtitle">회원의 상태와 등록되어 있는 정보를 확인하고 수정할 수 있는 곳입니다.</div>
+            </div>
+            <div class="bold_20px mid-title">• 내 정보 수정</div>
+
+            <!-- 테이블 구조 -->
+            <table class="myInfoUpdate">
+                <tbody>
+                    <tr>
+                        <th class="medium_16px black">회원상태</th>
+                        <td>
+                            <div class="regular_16px gray600">
+                                멤버십
+                            </div>
+                            <input class="medium_14px button-Black" type="button" value="멤버십 회원되기" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="medium_16px black">아이디</th>
+                        <td class="regular_16px gray600">yahong1</td>
+                    </tr>
+                    <tr>
+                        <th class="medium_16px black">기존 패스워드</th>
+                        <td><input class="regular_16px gray500" type="password" placeholder="기존 패스워드를 입력하세요" /></td>
+                    </tr>
+                    <tr>
+                        <th class="medium_16px black">새 패스워드</th>
+                        <td><input type="password" class="regular_16px gray500" placeholder="신규 패스워드를 입력하세요" /></td>
+                    </tr>
+                    <tr>
+                        <th class="medium_16px black">새 패스워드 확인</th>
+                        <td><input type="password" class="regular_16px gray500" placeholder="신규 패스워드를 재입력하세요" /></td>
+                    </tr>
+                    <tr>
+                        <th class="medium_16px black">이메일</th>
+                        <td>
+                            <input type="email" class="regular_16px black" value="yahong@yahong1.com" />
+                            <div class="regular_12px gray600">
+                                ※ 입력한 이메일은 실제 사용중인 이메일 주소로 정확히 입력해주세요.
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="medium_16px black">휴대전화번호</th>
+                        <td><input type="text" class="regular_16px black" value="010-1234-5678" /></td>
+                    </tr>
+                    <tr>
+                        <th class="medium_16px black">유튜브 채널 주소</th>
+                        <td>
+                            <input type="text" class="regular_16px gray500" placeholder="https://www.youtube.com/@채널아이디" />
+                            <div class="regular_12px gray600">
+                                ※ 가입 이후 유튜브 채널 주소가 변경되는 경우, 보유한 매너포인트가 모두 초기화 됩니다.
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="medium_16px black">매너 포인트</th>
+                        <td class="regular_16px gray600">10,000점</td>
+                    </tr>
+                    <tr>
+                        <th class="medium_16px black">내 정보 수정 시 약관동의</th>
+                        <td>
+                            <input class="icon_20px"  type="checkbox">
+                            <div>
+                                입력된 정보와 실제 계정의 사용자가 다른 경우 발생하는 문제에 대해서 GTG system 보안규정에 따른 민,형사상의 모든 책임을 지는 것에 동의합니다.
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- 수정 버튼 -->
+            <div>
+                <input class="bold_16px button-Blue" type="button" value="수정 완료" />
+            </div>
+        </section>
+    </main>
+    <script>
+        // 문서가 로드된 후 실행할 코드
+        document.addEventListener('DOMContentLoaded', function () {
+            // common.js에서 정의한 함수 호출
+            setupMenuClickHandler('.leftMenuBox ul li');
+        });
+    </script>
+
+</body>
+
+</html>

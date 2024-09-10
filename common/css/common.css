@@ -534,6 +534,8 @@ main{
 main >section{
     width: -webkit-fill-available;
     height: 100vh;
+    background-color: var(--Color-White);
+
 }
 
 /*home*/
@@ -560,8 +562,7 @@ main >section{
 
 /* videos */
 .watchVideo {
-    padding: 20px;
-    margin-left: 13px;
+    padding: 40px;
 }
 
 .watchVideo * {
@@ -658,7 +659,7 @@ main >section{
     object-fit: cover; /* 이미지의 비율을 유지하면서 부모 요소에 맞게 크기 조절 */
 }
 
-.watchVideo .button-watch {
+.watchVideo .button-Black {
     background-color: var(--Button-Black-Background);
     color: var(--Color-White);
     padding: 10px 20px;
@@ -681,22 +682,136 @@ main >section{
     align-items: flex-start;
 }
 
-.watchVideo .center-button {
+.watchVideo .button-White {
     text-align: center;
     margin-top: 20px;
 }
 
-.watchVideo .center-button button {
+.watchVideo .button-White input[type="button"] {
     padding: 10px 20px;
     background-color: var(--Button-White);
     border: 1px solid var(--Button-White-Line);
-    color: var(--Color-Black);
+    color: var(--Color-Black); /* 글씨 색상 */
     cursor: pointer;
-    border-radius: 8px !important;
+    border-radius: 8px;
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box; /* 패딩 포함된 박스 크기 */
+}
+
+.watchVideo .button-White input[type="button"]:hover {
+    background-color: var(--Color-Gray-200); /* hover 시 배경 색상 변경 */
+}
+
+/* MyInfoUpdate */
+.myInfo {
+    padding: 40px;
+}
+
+.myInfo * {
+    text-align: left;
+}
+
+.myInfo > .topContent > .top-title {
+    display : flex;
+    margin: 0;
+}
+.myInfo > .topContent > .top-subtitle {
+    display : flex;
+    color: var(--Color-Gray-800);
+    margin: 0;
+}
+
+.myInfo > .topContent {
+    display: flex;
+    align-items: baseline;
+}
+
+.myInfo > .topContent > .top-title {
+    margin-right: 20px; 
+}
+
+.myInfo > .mid-title {
+    margin-top: 32px;
+    padding: 10px 0px;
+}
+
+/* MyInfoUpdate 테이블 스타일 */
+.myInfo .myInfoUpdate {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    border-top: 1px solid var(--Color-Gray-700);
+    
+}
+
+.myInfo .myInfoUpdate th {
+    text-align: left;
+    background-color: var(--Color-Gray-100);
+    border-bottom: 1px solid var(--Color-Gray-300);
+    padding: 12px;
+    width: 200px;
+}
+
+.myInfo .myInfoUpdate td {
+    padding: 10px;
+    border-bottom: 1px solid var(--Color-Gray-300);
+}
+
+.myInfo .myInfoUpdate input[type="text"],
+.myInfo .myInfoUpdate input[type="password"],
+.myInfo .myInfoUpdate input[type="email"] {
+    width: 70%;
+    padding: 8px;
+    border: 1px solid var(--Color-Gray-400);
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.myInfo .myInfoUpdate tr:nth-child(10) td {
+    display: flex;
+    align-items: center;
+}
+
+.myInfo .myInfoUpdate input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.myInfo .myInfoUpdate tr:nth-child(1) td {
+    display: flex;
+    align-items: center;
+}
+
+.myInfo .myInfoUpdate .button-Black {
+    background-color: var(--Button-Black-Background);
+    color: var(--Color-White);
+    padding: 6px 16px;
+    margin-left: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.myInfo .button-Blue {
+    display: flex;
+    text-align: center;
+    margin: 25px auto 0;
+    padding: 12px 24px;
+    background-color: var(--Color-Blue);
+    color: var(--Color-White);
+    border: none;
+    border-radius: 8px;
+    width: auto;
+    cursor: pointer;
+}
+
+.myInfo .button-Blue:active {
+    background-color: var(--Color-Blue-100);
 }
 
 
-
+/* JoinMemberPopup */
 .pop{
     margin: 74px 0 0 0;
     display: flex;
