@@ -749,7 +749,7 @@ main >section{
     text-align: left;
     background-color: var(--Color-Gray-100);
     border-bottom: 1px solid var(--Color-Gray-300);
-    padding: 12px;
+    padding: 8px;
     width: 200px;
 }
 
