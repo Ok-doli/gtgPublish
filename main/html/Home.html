@@ -2,6 +2,8 @@
 <html lang="ko">
 	<title>GTG Main</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
     <!-- css -->
     <link rel="stylesheet" type="text/css" href="../../common/css/common.css"/>
     <!-- js -->
@@ -10,7 +12,7 @@
     <!-- 헤더 -->
 	<header>
 		<div class="headerBox">
-			<div class="svg_default topLogo"></div>
+			<div class="topLogo"></div>
 			<div class="bold_14px black">Guest</div>
 		</div>
     </header>
@@ -20,20 +22,22 @@
 		 <!-- Left 메뉴 -->
 		 <nav class="leftMenuBox">
             <ul>
-                <li><a href="#" class="medium_16px">홈</a></li>
-                <li><a href="#" class="medium_16px">시청할 영상</a></li>
-                <li><a href="#" class="medium_16px">내 영상</a></li>
+                <li class="active"><a href="../html/Home.html" class="medium_16px">홈</a></li>
+                <li><a href="../html/Videos.html" class="medium_16px">시청할 영상</a></li>
+                <li><a href="../html/MyInfoUpdate.html" class="medium_16px">내 영상</a></li>
                 <li><a href="#" class="medium_16px">내 정보</a></li>
             </ul>
         </nav>
 
         <section class="div-scroll-y homeBox">
-			<div class="bold_32px">GTG 홈</div>
+			<div class="bold_32px title">GTG 홈</div>
 			<article>
-				<img src="../../common/img/main1.png" alt="Image 1">
-				<img src="../../common/img/main2.png" alt="Image 2">
-				<img src="../../common/img/main3.png" alt="Image 3">
-
+				<img src="../../common/img/main01.png" alt="GTG는 서로의 영상을 끝까지 시청해주는 유튜브 품앗이 커뮤니티입니다.">
+				<img src="../../common/img/main02.png" alt="GTG는 매너포인트로 작동합니다.">
+                <img src="../../common/img/main03.png" alt="내 영상에서 원하는 영상을 올리고 시청할 영상에서 매너포인트를 쌓으세요. 내 정보에서 매너포인트를 확인할 수 있습니다.">
+				<img src="../../common/img/main04.png" alt="GTG 유튜브 품앗이 커뮤니티 사용방법">
+                <img src="../../common/img/main05.png" alt="GTG는 신뢰를 기반으로 운영됩니다.">
+                <img src="../../common/img/main06.png" alt="모니터링이 주기적으로 진행됩니다.">
 			</article>
         </section>
     </main>
@@ -42,6 +46,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             // common.js에서 정의한 함수 호출
             setupMenuClickHandler('.leftMenuBox ul li');
+
         });
     </script>
  

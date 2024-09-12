@@ -86,68 +86,93 @@ Button, html [type="button"] {
 }
     /* Bold 스타일 */
     .bold_14px {
-    font-family: "Noto Sans Korean";
-    font-weight: 900; /* Bold */
-    font-size: 14px;
-  }
-  
-  .bold_16px {
-    font-family: "Noto Sans Korean";
-    font-weight: 900; /* Bold */
-    font-size: 16px;
-  }
-  
-  .bold_20px {
-    font-family: "Noto Sans Korean";
-    font-weight: 900; /* Bold */
-    font-size: 20px;
-  }
-  
-  .bold_32px {
-    font-family: "Noto Sans Korean";
-    font-weight: 900; /* Bold */
-    font-size: 32px;
-  }
-  
-  /* Medium 스타일 */
-  .medium_16px {
-    font-family: "Noto Sans Korean";
-    font-weight: 500; /* Medium */
-    font-size: 16px;
-  }
-  
-  /* DemiLight 스타일 */
-  .demiLight_14px {
-    font-family: "Noto Sans Korean";
-    font-weight: 300; /* DemiLight */
-    font-size: 14px;
-  }
+        font-family: "Noto Sans Korean";
+        font-weight: 900; /* Bold */
+        font-size: 14px;
+    }
 
-  /* DemiLight 스타일 */
-  .demiLight_16px {
-    font-family: "Noto Sans Korean";
-    font-weight: 300; /* DemiLight */
-    font-size: 16px;
-  }  
-  
-  /* Regular 스타일 */
-  .regular_14px {
-    font-family: "Noto Sans Korean";
-    font-weight: 400; /* Regular */
-    font-size: 14px;
-  }
-  
-  .regular_16px {
-    font-family: "Noto Sans Korean";
-    font-weight: 400; /* Regular */
-    font-size: 16px;
-  }
-  
-  .regular_12px {
-    font-family: "Noto Sans Korean";
-    font-weight: 400; /* Regular */
-    font-size: 12px;
-  }
+    .bold_16px {
+        font-family: "Noto Sans Korean";
+        font-weight: 900; /* Bold */
+        font-size: 16px;
+    }
+
+    .bold_20px {
+        font-family: "Noto Sans Korean";
+        font-weight: 900; /* Bold */
+        font-size: 20px;
+    }
+
+    .bold_32px {
+        font-family: "Noto Sans Korean";
+        font-weight: 900; /* Bold */
+        font-size: 32px;
+    }
+
+    /* Medium 스타일 */
+    .medium_16px {
+        font-family: "Noto Sans Korean";
+        font-weight: 500; /* Medium */
+        font-size: 16px;
+    }
+
+    /* DemiLight 스타일 */
+    .demiLight_14px {
+        font-family: "Noto Sans Korean";
+        font-weight: 300; /* DemiLight */
+        font-size: 14px;
+    }
+
+    /* DemiLight 스타일 */
+    .demiLight_16px {
+        font-family: "Noto Sans Korean";
+        font-weight: 300; /* DemiLight */
+        font-size: 16px;
+    }  
+
+    /* Regular 스타일 */
+    .regular_14px {
+        font-family: "Noto Sans Korean";
+        font-weight: 400; /* Regular */
+        font-size: 14px;
+    }
+
+    .regular_16px {
+        font-family: "Noto Sans Korean";
+        font-weight: 400; /* Regular */
+        font-size: 16px;
+    }
+
+    .regular_12px {
+        font-family: "Noto Sans Korean";
+        font-weight: 400; /* Regular */
+        font-size: 12px;
+    }
+
+    .icon_12px {
+        width: 12px;
+        height: 12px;
+    }
+    .icon_20px {
+        width: 20px;
+        height: 20px;
+    }
+    .icon_24px {
+        width: 24px;
+        height: 24px;
+    }
+    .icon_32px {
+        width: 32px;
+        height: 32px;
+    }
+    .icon_84px {
+        width: 84px;
+        height: 84px;
+    }
+    .topLogo{
+        width: 96px;
+        height: 34px;
+    }
   
 
 /* 전체 요소에 적용될 스타일 */
@@ -174,10 +199,14 @@ html, body {
 	-khtml-user-select: none;
 	user-select: none;
     background-color: var(--Color-Light-Blue);
-    /* overflow: hidden; 2024-09-07 임시 주석 */
+
+    /* overflow-x: hidden;
+    overflow-y: hidden; */
 }
 
-
+body::-webkit-scrollbar {
+    display: none;
+}
 
 
 /* Color Set */
@@ -192,6 +221,7 @@ html, body {
     --Color-Light-Gray-2: #D9D9D9;
     --Color-Light-Gray-3: #DBDBDB;
     --Color-Light-Gray-4: #DADADA;
+    --Color-Light-Gray-5: #BCC2C9;
     --Color-Medium-Gray: #999999;
     --Color-Dark-Gray: #30374D;
     --Color-Darker-Gray: #555555;
@@ -224,6 +254,7 @@ html, body {
     --Color-Gray-600: #555555;
     --Color-Gray-700: #30374D;
     --Color-Gray-800: #0E0E0E;
+    --Color-Gray-900: #BCC2C9;
 
     --Color-Blue-100: #EFF5F8;
 }
@@ -278,10 +309,15 @@ html, body {
     color: var(--Color-Gray-800);
 }
 
+.gray900 {
+    color: var(--Color-Gray-900);
+}
+
 /* 파란색 계열 */
 .blue100 {
     color: var(--Color-Blue-100);
 }
+
 
 /* 기본 PC 크기 (1281px 이상) */
 @media (min-width: 1281px) {
@@ -399,57 +435,69 @@ html, body {
 /* 일반 핸드폰 크기 (767px 이하) */
 @media (max-width: 767px) {
     .bold_14px {
-        font-size: 12px;
+        font-size: 10px;
     }
     .bold_16px {
-        font-size: 14px;
+        font-size: 12px;
     }
     .bold_20px {
         font-size: 16px;
     }
     .bold_32px {
-        font-size: 20px;
+        font-size: 28px;
     }
     .medium_16px {
-        font-size: 14px;
+        font-size: 12px;
     }
     .demiLight_14px {
-        font-size: 12px;
+        font-size: 10px;
     }
     .regular_14px {
-        font-size: 12px;
+        font-size: 10px;
     }
     .regular_16px {
-        font-size: 14px;
+        font-size: 12px;
     }
     .regular_12px {
-        font-size: 12px;
+        font-size: 8px;
     }
     .icon_12px {
         width: 8px;
         height: 8px;
     }
     .icon_20px {
-        width: 14px;
-        height: 14px;
-    }
-    .icon_24px {
         width: 16px;
         height: 16px;
     }
-    .icon_32px {
+    .icon_24px {
         width: 20px;
         height: 20px;
     }
+    .icon_32px {
+        width: 28px;
+        height: 28px;
+    }
     .icon_84px {
-        width: 40px;
-        height: 40px;
+        width: 80px;
+        height: 80px;
     }
     .topLogo{
-        width: 96px;
-        height: 34px;
+        width: 85px;
+        height: 23px;
+    }
+
+    .leftMenuBox {
+        display: none;
+    }
+    .homeBox {
+        padding:  0  !important;
+    }
+
+    .homeBox > .title{
+        margin: 10px 20px !important;
     }
 }
+
 
 /*공통*/
 .svg_default {
@@ -463,7 +511,6 @@ html, body {
 .div-scroll-y {
     overflow-y: scroll;
     scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
  }
   
 /* 스크롤바 숨기기 - 테스트에서는 영역 봐야해서 우선은 주석 처리*/
@@ -474,6 +521,11 @@ html, body {
 /*header*/
 .topLogo {
     background-image: url("../icon/topLogo.svg");
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: contain;
+    display: inline-block;
+    vertical-align: middle;
 }
 header{
     background-color: var(--Color-White);
@@ -486,12 +538,13 @@ header{
     border-bottom: 1px solid var(--Color-Gray-300) ;
 }
 
+
 /*left menu*/
 
  /* Left 메뉴 스타일 */
 .leftMenuBox {
     background-color: var(--Color-Blue-100);
-    width: 200px;
+    min-width: 200px;
     height: 100vh;
     padding: 32px  0px 0px 12px;
     box-sizing: border-box;
@@ -543,7 +596,10 @@ main >section{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 30px 0 0 40px;
+    padding: 0 0 0 40px;
+}
+.homeBox > .title{
+    margin: 20px 0 ;
 }
 
 .homeBox > article{
@@ -563,6 +619,7 @@ main >section{
 /* videos */
 .watchVideo {
     padding: 40px;
+    height: 100%;
 }
 
 .watchVideo * {
@@ -572,6 +629,7 @@ main >section{
 .watchVideo .topContent .top-title {
     display : flex;
     margin: 0;
+    min-width: 145px; /* 최소 단위를 넣어서 모바일에서 줄바꿈 방지 */
 }
 .watchVideo .topContent .top-subtitle {
     display : flex;
@@ -652,6 +710,10 @@ main >section{
     color: var(--Color-Gray-600);
 }
 
+.watchVideo .videoList td:nth-child(2) {
+    text-align: left;
+}
+
 .watchVideo .videoList td img {
     flex: 1 1 auto; /* 가로 크기를 자동으로 조절 */
     max-width: 100%; /* 이미지의 최대 너비를 부모 요소의 너비로 제한 */
@@ -662,11 +724,15 @@ main >section{
 .watchVideo .button-Black {
     background-color: var(--Button-Black-Background);
     color: var(--Color-White);
-    padding: 10px 20px;
+    padding: 6px 16px;
     border: none;
-    border-radius: 8px !important;
+    border-radius: 8px;
     cursor: pointer;
     display: inline-block;
+}
+
+.watchVideo .button-Black:active {
+    opacity: 0.9;
 }
 
 .watchVideo .points-text {
@@ -701,6 +767,342 @@ main >section{
 
 .watchVideo .button-White input[type="button"]:hover {
     background-color: var(--Color-Gray-200); /* hover 시 배경 색상 변경 */
+}
+
+/* MyVideos 제목 스타일*/
+.watchVideo .topContent .MyVid {
+    display : flex;
+    margin: 0;
+    min-width: 80px; /* 최소 단위를 넣어서 모바일에서 줄바꿈 방지 */
+}
+
+.watchVideo .topContent .MyVid {
+    margin-right: 10px; 
+}
+
+/* MyVideos 버튼 wrap*/
+.watchVideo .button-wrap {
+    text-align: right;
+    margin-top: 58px;
+}
+
+.watchVideo .button-wrap .button-Black {
+    display: inline-block;
+    padding: 0;
+}
+
+.watchVideo .button-wrap .button-Black input {
+    padding: 8px 16px;
+    background-color: var(--Button-Black-Background);
+    color: var(--Color-White);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.watchVideo .button-wrap .button-White {
+    display: inline-block;
+    margin-top: 0;
+}
+
+.watchVideo .button-wrap .button-White input {
+    padding: 8px 16px;
+}
+
+/* MyVideos 테이블 스타일*/
+.watchVideo .myVideoList {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 24px;
+}
+
+.watchVideo .myVideoList th, .myVideoList td {
+    border: 1px solid var(--Color-Gray-300);
+    border-right: none; /* 세로선 제거 */
+    border-left: none;  /* 세로선 제거 */
+    border-top: 1px solid var(--Color-Gray-700);
+    padding: 12px;
+    text-align: center;
+}
+
+.watchVideo .myVideoList th {
+    background-color: var(--Color-Light-Gray-1);
+}
+
+.watchVideo .myVideoList td {
+    vertical-align: top;
+    height: auto; /* 이미지 사이즈에 맞춰서 높이 자동 조절 */
+    color: var(--Color-Gray-600);
+}
+
+.watchVideo .myVideoList td:nth-child(3) {
+    text-align: left;
+}
+
+.watchVideo .myVideoList td img {
+    flex: 1 1 auto; /* 가로 크기를 자동으로 조절 */
+    max-width: 100%; /* 이미지의 최대 너비를 부모 요소의 너비로 제한 */
+    height: auto; /* 이미지 비율 유지 */
+    object-fit: cover; /* 이미지의 비율을 유지하면서 부모 요소에 맞게 크기 조절 */
+}
+
+/* MyVideos 노출제어 스위치 */
+.switch {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 30px;
+}
+
+.switch input {
+    display: none; /* 체크박스 숨기기 */
+}
+
+.switch-label {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: var(--Color-Light-Blue);
+    border: 1px solid var(--Color-Gray-900);
+
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.switch-label .switch-slider {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 24px;
+    height: 24px;
+    background-color: var(--Color-Dark-Gray);
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.switch-on, .switch-off {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: var(--Color-Darker-Gray);
+    width: 30px;
+    text-align: center;
+}
+
+.switch-on {
+    left: 5px;
+}
+
+.switch-off {
+    right: 5px;
+}
+
+input:checked + .switch-label .switch-slider {
+    transform: translateX(30px);
+}
+
+input:not(:checked) + .switch-label .switch-slider {
+    background-color: var(--Color-Gray-900);
+}
+
+input:checked + .switch-label .switch-on {
+    display: block; /* ON일 때 표시 */
+}
+
+input:checked + .switch-label .switch-off {
+    display: none; /* ON일 때 OFF 숨기기 */
+}
+
+input:not(:checked) + .switch-label .switch-off {
+    display: block; /* OFF일 때 표시 */
+}
+
+input:not(:checked) + .switch-label .switch-on {
+    display: none; /* OFF일 때 ON 숨기기 */
+}
+
+/* MyVideos 페이지네이션 */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 24px 0;
+}
+
+.pagination li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--Color-Gray-400);
+    width: 42px;
+    height: 40px;
+    margin: 0;
+    background-color: var(--Color-White);
+    font-size: 14px;
+    cursor: pointer;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.pagination > li > a{
+    text-decoration: none;
+    color: var(--Color-Gray-600);
+}
+
+.pagination li.arrow {
+    width: 50px;
+    height: 40px;
+}
+
+.pagination li:first-child {
+    border-radius: 8px 0 0 8px;
+    border-left: 1px solid var(--Color-Gray-400);
+    width: 50px;
+}
+
+.pagination li:last-child {
+    border-radius: 0 8px 8px 0;
+    width: 50px;
+}
+
+.pagination li:not(:first-child):not(:last-child) {
+    border-left: none;
+}
+
+.pagination .active {
+    background-color: var(--Color-Blue);
+}
+
+.pagination .active a {
+    color: var(--Color-White);
+}
+
+.pagination li:hover {
+    background-color: var(--Color-Gray-200);
+}
+
+화살표
+.pagination li.arrow::before {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+}
+
+.pagination li.prev::before {
+    transform: rotate(-135deg);
+}
+
+.pagination li.next::before {
+    transform: rotate(45deg);
+}
+
+
+/* MyInfo */
+.myInfo {
+    padding: 40px;
+}
+
+.myInfo * {
+    text-align: left;
+}
+
+.myInfo > .topContent > .top-title {
+    display : flex;
+    margin: 0;
+}
+.myInfo > .topContent > .top-subtitle {
+    display : flex;
+    color: var(--Color-Gray-800);
+    margin: 0;
+}
+
+.myInfo > .topContent {
+    display: flex;
+    align-items: baseline;
+}
+
+.myInfo > .topContent > .top-title {
+    margin-right: 20px; 
+}
+
+.myInfo > .mid-title {
+    margin-top: 32px;
+    padding: 10px 0px;
+}
+
+/* myInfoList 테이블 스타일 */
+.myInfo .myInfoList {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    border-top: 1px solid var(--Color-Gray-700);
+    
+}
+
+.myInfo .myInfoList th {
+    text-align: left;
+    background-color: var(--Color-Gray-100);
+    border-bottom: 1px solid var(--Color-Gray-300);
+    padding: 12px;
+    width: 200px;
+}
+
+.myInfo .myInfoList td {
+    padding: 12px;
+    border-bottom: 1px solid var(--Color-Gray-300);
+}
+
+.myInfo .myInfoList tr {
+    height: 66px;
+}
+
+.myInfo .myInfoList tr:nth-child(10) td {
+    display: flex;
+    align-items: center;
+}
+
+
+.myInfo .myInfoList tr td div {
+    display: inline-block;
+    align-items: center;
+    height: 100%;
+}
+
+.myInfo .myInfoList .button-Black {
+    background-color: var(--Button-Black-Background);
+    color: var(--Color-White);
+    padding: 6px 16px;
+    margin-left: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.myInfo .myInfoList .button-Black:active {
+    opacity: 0.9;
+}
+
+.myInfo .button-Blue {
+    display: flex;
+    text-align: center;
+    margin: 25px auto 0;
+    padding: 12px 24px;
+    background-color: var(--Color-Blue);
+    color: var(--Color-White);
+    border: none;
+    border-radius: 8px;
+    width: auto;
+    cursor: pointer;
+}
+
+.myInfo .button-Blue:active {
+    opacity: 0.9;
 }
 
 /* MyInfoUpdate */
@@ -749,12 +1151,12 @@ main >section{
     text-align: left;
     background-color: var(--Color-Gray-100);
     border-bottom: 1px solid var(--Color-Gray-300);
-    padding: 8px;
+    padding: 12px;
     width: 200px;
 }
 
 .myInfo .myInfoUpdate td {
-    padding: 10px;
+    padding: 12px;
     border-bottom: 1px solid var(--Color-Gray-300);
 }
 
@@ -793,6 +1195,10 @@ main >section{
     display: inline-block;
 }
 
+.myInfo .myInfoUpdate .button-Black:active {
+    opacity: 0.9;
+}
+
 .myInfo .button-Blue {
     display: flex;
     text-align: center;
@@ -807,17 +1213,19 @@ main >section{
 }
 
 .myInfo .button-Blue:active {
-    background-color: var(--Color-Blue-100);
+    opacity: 0.9;
 }
 
 
 /* JoinMemberPopup */
 .pop{
-    margin: 74px 0 0 0;
+    padding: 74px 12px;
     display: flex;
     align-items: flex-start;
     justify-content: center;
     flex-direction: row;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
 }
 
 .pop > section{
@@ -889,6 +1297,7 @@ main >section{
 input[type="checkbox"] {
     cursor: pointer;
     border-radius: 4px;
+    min-width: 16px ;
 }
 
 /* 체크박스가 선택되었을 때 */
