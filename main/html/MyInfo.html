@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html lang="ko">
-	<title>GTG Main</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<title>GTG Main</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
-    <!-- css -->
-    <link rel="stylesheet" type="text/css" href="../../common/css/common.css"/>
-    <!-- js -->
-	<script type="text/javascript" src="../../common/js/common.js"></script>
+<!-- css -->
+<link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
+<!-- js -->
+<script type="text/javascript" src="../../common/js/common.js"></script>
+
 <body>
     <!-- 헤더 -->
-	<header>
-		<div class="headerBox">
+    <header>
+        <div class="headerBox">
             <div class="hamburger-menu bold_20px" onclick="toggleMenu()">☰</div>
-			<div class="topLogo"></div>
-			<div class="bold_14px black">Guest</div>
-		</div>
+            <div class="topLogo"></div>
+            <div class="bold_14px black">Guest</div>
+        </div>
     </header>
 
     <!-- 메인 콘텐츠 -->
     <main>
-		 <!-- Left 메뉴 -->
-		 <nav class="leftMenuBox">
+        <!-- Left 메뉴 -->
+        <nav class="leftMenuBox">
             <ul>
                 <li><a href="../html/Home.html" class="medium_16px">홈</a></li>
                 <li><a href="../html/Videos.html" class="medium_16px">시청할 영상</a></li>
@@ -37,56 +38,59 @@
                 <div class="regular_14px top-subtitle">회원의 상태와 등록되어 있는 정보를 확인하고 수정할 수 있는 곳입니다.</div>
             </div>
             <div class="bold_20px mid-title">• 내 정보</div>
+            <div class="myInfoWrap">
+                <!-- 테이블 구조 -->
+                <table class="myInfoList">
+                    <tbody>
+                        <tr>
+                            <th class="medium_16px black">회원상태</th>
+                            <td>
+                                <div class="regular_16px gray600">
+                                    멤버십
+                                </div>
+                                <input class="medium_14px button-Black" type="button" value="멤버십 회원되기" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="medium_16px black">아이디</th>
+                            <td>
+                                <div class="regular_16px gray600">
+                                    yahong1
+                                </div>
+                                <input class="medium_14px button-Black" type="button" value="패스워드 변경" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="medium_16px black">이메일</th>
+                            <td class="regular_16px gray600">yahong@yahong1.com</td>
+                        </tr>
+                        <tr>
+                            <th class="medium_16px black">휴대전화번호</th>
+                            <td class="regular_16px gray600">010-1234-5678</td>
+                        </tr>
+                        <tr>
+                            <th class="medium_16px black">유튜브 채널 주소</th>
+                            <td class="regular_16px gray600">https://www.youtube.com/@yahongtestsample</td>
+                        </tr>
+                        <tr>
+                            <th class="medium_16px black">매너 포인트</th>
+                            <td class="regular_16px gray600">10,000점</td>
+                        </tr>
+                    </tbody>
+                </table>
 
-            <!-- 테이블 구조 -->
-            <table class="myInfoList">
-                <tbody>
-                    <tr>
-                        <th class="medium_16px black">회원상태</th>
-                        <td>
-                            <div class="regular_16px gray600">
-                                멤버십
-                            </div>
-                            <input class="medium_14px button-Black" type="button" value="멤버십 회원되기" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <th class="medium_16px black">아이디</th>
-                        <td>
-                            <div class="regular_16px gray600">
-                                yahong1
-                            </div>
-                            <input class="medium_14px button-Black" type="button" value="패스워드 변경" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <th class="medium_16px black">이메일</th>
-                        <td class="regular_16px gray600">yahong@yahong1.com</td>
-                    </tr>
-                    <tr>
-                        <th class="medium_16px black">휴대전화번호</th>
-                        <td class="regular_16px gray600">010-1234-5678</td>
-                    </tr>
-                    <tr>
-                        <th class="medium_16px black">유튜브 채널 주소</th>
-                        <td class="regular_16px gray600">https://www.youtube.com/@yahongtestsample</td>
-                    </tr>
-                    <tr>
-                        <th class="medium_16px black">매너 포인트</th>
-                        <td class="regular_16px gray600">10,000점</td>
-                    </tr>
-                </tbody>
-            </table>
+            </div>
 
             <!-- 수정 버튼 -->
             <div>
-                <input class="bold_16px button-Blue" type="button" value="수정 하기" onclick="location.href='../html/MyInfoUpdate.html'" />
+                <input class="bold_16px button-Blue" type="button" value="수정 하기"
+                    onclick="location.href='../html/MyInfoUpdate.html'" />
             </div>
         </section>
     </main>
     <script>
         // 문서가 로드된 후 실행할 코드
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // common.js에서 정의한 함수 호출
             setupMenuClickHandler('.leftMenuBox ul li');
 

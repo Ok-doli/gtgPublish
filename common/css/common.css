@@ -396,6 +396,23 @@ body::-webkit-scrollbar {
         height: 50px;
     }
 
+    .myInfo > .topContent {
+        display: flex;
+        align-items: baseline;
+    }
+
+    .myInfo .myInfoList th {
+        width: 200px;
+    }
+
+    .myInfo .myInfoUpdate th {
+        width: 200px;
+    }
+
+    .watchVideo > .topContent {
+        display: flex;
+        align-items: baseline;
+    }
     
 }
 
@@ -471,7 +488,6 @@ body::-webkit-scrollbar {
         left: 35.3% !important;
     }
 
-    /* 고정 높이 설정 - 태블릿일 때만 */
     .VideoWrap {
         overflow-x: auto; /* 가로 스크롤 활성화 */
         width: 100%; /* 부모 요소의 너비를 100%로 설정 */
@@ -488,6 +504,42 @@ body::-webkit-scrollbar {
         min-width: 1000px; /* 최소 너비 설정 */
         border-collapse: collapse; /* 테두리가 겹치지 않게 */
     }
+
+    .myInfoWrap {
+        overflow-x: auto; /* 가로 스크롤 활성화 */
+        width: 100%; /* 부모 요소의 너비를 100%로 설정 */
+    }
+    
+    .myInfoList {
+        width: 100%; /* 테이블 너비 설정 */
+        min-width: 1000px; /* 최소 너비 설정 */
+        border-collapse: collapse; /* 테두리가 겹치지 않게 */
+    }
+
+    .myInfoUpdate {
+        width: 100%; /* 테이블 너비 설정 */
+        min-width: 1000px; /* 최소 너비 설정 */
+        border-collapse: collapse; /* 테두리가 겹치지 않게 */
+    }
+
+    .myInfo > .topContent {
+        display: flex;
+        align-items: baseline;
+    }
+
+    .myInfo .myInfoList th {
+        width: 150px;
+    }
+
+    .myInfo .myInfoUpdate th {
+        width: 150px;
+    }
+
+    .watchVideo > .topContent {
+        display: flex;
+        align-items: baseline;
+    }
+
 }
 
 
@@ -645,6 +697,58 @@ body::-webkit-scrollbar {
 
     body::-webkit-scrollbar {
         display: inline;
+    }
+
+    .VideoWrap {
+        overflow-x: auto; /* 가로 스크롤 활성화 */
+        width: 100%; /* 부모 요소의 너비를 100%로 설정 */
+    }
+    
+    .myVideoList {
+        width: 100%; /* 테이블 너비 설정 */
+        min-width: 1000px; /* 최소 너비 설정 */
+        border-collapse: collapse; /* 테두리가 겹치지 않게 */
+    }
+
+    .videoList {
+        width: 100%; /* 테이블 너비 설정 */
+        min-width: 1000px; /* 최소 너비 설정 */
+        border-collapse: collapse; /* 테두리가 겹치지 않게 */
+    }
+
+    .myInfoWrap {
+        overflow-x: auto; /* 가로 스크롤 활성화 */
+        width: 100%; /* 부모 요소의 너비를 100%로 설정 */
+    }
+    
+    .myInfoList {
+        width: 100%; /* 테이블 너비 설정 */
+        min-width: 1000px; /* 최소 너비 설정 */
+        border-collapse: collapse; /* 테두리가 겹치지 않게 */
+    }
+
+    .myInfoUpdate {
+        width: 100%; /* 테이블 너비 설정 */
+        min-width: 1000px; /* 최소 너비 설정 */
+        border-collapse: collapse; /* 테두리가 겹치지 않게 */
+    }
+
+    .myInfo > .topContent {
+        display: flex;
+        align-items: center;
+    }
+
+    .myInfo .myInfoList th {
+        width: 100px;
+    }
+
+    .myInfo .myInfoUpdate th {
+        width: 100px;
+    }
+
+    .watchVideo > .topContent {
+        display: flex;
+        align-items: center;
     }
   
 }
@@ -973,22 +1077,14 @@ main >section{
 .watchVideo .topContent .top-title {
     display : flex;
     margin: 0;
-    min-width: 145px; /* 최소 단위를 넣어서 모바일에서 줄바꿈 방지 */
     white-space: nowrap;
+    margin-right: 19px; 
+
 }
 .watchVideo .topContent .top-subtitle {
     display : flex;
     color: var(--Color-Gray-800);
     margin: 0;
-}
-
-.watchVideo .topContent {
-    display: flex;
-    align-items: baseline;
-}
-
-.watchVideo .topContent .top-title {
-    margin-right: 19px; 
 }
 
 .watchVideo .midContent {
@@ -1043,6 +1139,7 @@ main >section{
     border-top: 1px solid var(--Color-Gray-700);
     padding: 12px;
     text-align: center;
+    min-width: 30px;
 }
 
 .watchVideo .videoList th {
@@ -1118,7 +1215,6 @@ main >section{
 .watchVideo .topContent .MyVid {
     display : flex;
     margin: 0;
-    min-width: 80px; /* 최소 단위를 넣어서 모바일에서 줄바꿈 방지 */
     white-space: nowrap;
 }
 
@@ -1169,6 +1265,7 @@ main >section{
     border-top: 1px solid var(--Color-Gray-700);
     padding: 12px;
     text-align: center;
+    min-width: 30px;
 }
 
 .watchVideo .myVideoList th {
@@ -1332,7 +1429,7 @@ input:not(:checked) + .switch-label .switch-on {
     background-color: var(--Color-Gray-200);
 }
 
-화살표
+/* 화살표 */
 .pagination li.arrow::before {
     display: inline-block;
     width: 10px;
@@ -1369,11 +1466,6 @@ input:not(:checked) + .switch-label .switch-on {
     margin: 0;
 }
 
-.myInfo > .topContent {
-    display: flex;
-    align-items: baseline;
-}
-
 .myInfo > .mid-title {
     margin-top: 32px;
     padding: 10px 0px;
@@ -1393,7 +1485,6 @@ input:not(:checked) + .switch-label .switch-on {
     background-color: var(--Color-Gray-100);
     border-bottom: 1px solid var(--Color-Gray-300);
     padding: 12px;
-    width: 200px;
 }
 
 .myInfo .myInfoList td {
@@ -1468,11 +1559,6 @@ input:not(:checked) + .switch-label .switch-on {
     margin: 0;
 }
 
-.myInfo > .topContent {
-    display: flex;
-    align-items: baseline;
-}
-
 .myInfo > .topContent > .top-title {
     margin-right: 20px; 
 }
@@ -1496,7 +1582,6 @@ input:not(:checked) + .switch-label .switch-on {
     background-color: var(--Color-Gray-100);
     border-bottom: 1px solid var(--Color-Gray-300);
     padding: 12px;
-    width: 200px;
 }
 
 .myInfo .myInfoUpdate td {
