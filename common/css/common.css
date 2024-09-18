@@ -81,98 +81,122 @@ input, textarea, button {
     border-radius: 0 ;
     -moz-border-radius: 0 ;
 }
+
 Button, html [type="button"] {
   -webkit-appearance: none ;
 }
-    /* Bold 스타일 */
-    .bold_14px {
-        font-family: "Noto Sans Korean";
-        font-weight: 900; /* Bold */
-        font-size: 14px;
-    }
 
-    .bold_16px {
-        font-family: "Noto Sans Korean";
-        font-weight: 900; /* Bold */
-        font-size: 16px;
-    }
+/* Bold 스타일 */
+.bold_14px {
+    font-family: "Noto Sans Korean";
+    font-weight: 900; /* Bold */
+    font-size: 14px;
+}
 
-    .bold_20px {
-        font-family: "Noto Sans Korean";
-        font-weight: 900; /* Bold */
-        font-size: 20px;
-    }
+.bold_16px {
+    font-family: "Noto Sans Korean";
+    font-weight: 900; /* Bold */
+    font-size: 16px;
+}
 
-    .bold_32px {
-        font-family: "Noto Sans Korean";
-        font-weight: 900; /* Bold */
-        font-size: 32px;
-    }
+.bold_20px {
+    font-family: "Noto Sans Korean";
+    font-weight: 900; /* Bold */
+    font-size: 20px;
+}
 
-    /* Medium 스타일 */
-    .medium_16px {
-        font-family: "Noto Sans Korean";
-        font-weight: 500; /* Medium */
-        font-size: 16px;
-    }
+.bold_32px {
+    font-family: "Noto Sans Korean";
+    font-weight: 900; /* Bold */
+    font-size: 32px;
+}
 
-    /* DemiLight 스타일 */
-    .demiLight_14px {
-        font-family: "Noto Sans Korean";
-        font-weight: 300; /* DemiLight */
-        font-size: 14px;
-    }
+.bold_36px {
+    font-family: "Noto Sans Korean";
+    font-weight: 900; /* Bold */
+    font-size: 36px;
+}
 
-    /* DemiLight 스타일 */
-    .demiLight_16px {
-        font-family: "Noto Sans Korean";
-        font-weight: 300; /* DemiLight */
-        font-size: 16px;
-    }  
+/* Medium 스타일 */
+.medium_14px{
+    font-family: "Noto Sans Korean";
+    font-weight: 500; /* Medium */
+    font-size: 14px;
+}
 
-    /* Regular 스타일 */
-    .regular_14px {
-        font-family: "Noto Sans Korean";
-        font-weight: 400; /* Regular */
-        font-size: 14px;
-    }
+.medium_16px {
+    font-family: "Noto Sans Korean";
+    font-weight: 500; /* Medium */
+    font-size: 16px;
+}
 
-    .regular_16px {
-        font-family: "Noto Sans Korean";
-        font-weight: 400; /* Regular */
-        font-size: 16px;
-    }
+/* DemiLight 스타일 */
+.demiLight_14px {
+    font-family: "Noto Sans Korean";
+    font-weight: 300; /* DemiLight */
+    font-size: 14px;
+}
 
-    .regular_12px {
-        font-family: "Noto Sans Korean";
-        font-weight: 400; /* Regular */
-        font-size: 12px;
-    }
+/* DemiLight 스타일 */
+.demiLight_16px {
+    font-family: "Noto Sans Korean";
+    font-weight: 300; /* DemiLight */
+    font-size: 16px;
+}  
 
-    .icon_12px {
-        width: 12px;
-        height: 12px;
-    }
-    .icon_20px {
-        width: 20px;
-        height: 20px;
-    }
-    .icon_24px {
-        width: 24px;
-        height: 24px;
-    }
-    .icon_32px {
-        width: 32px;
-        height: 32px;
-    }
-    .icon_84px {
-        width: 84px;
-        height: 84px;
-    }
-    .topLogo{
-        width: 96px;
-        height: 34px;
-    }
+/* Regular 스타일 */
+.regular_14px {
+    font-family: "Noto Sans Korean";
+    font-weight: 400; /* Regular */
+    font-size: 14px;
+}
+
+.regular_16px {
+    font-family: "Noto Sans Korean";
+    font-weight: 400; /* Regular */
+    font-size: 16px;
+}
+
+.regular_12px {
+    font-family: "Noto Sans Korean";
+    font-weight: 400; /* Regular */
+    font-size: 12px;
+}
+
+.icon_12px {
+    width: 12px;
+    height: 12px;
+}
+.icon_16px {
+    width: 16px;
+    height: 16px;
+}
+.icon_20px {
+    width: 20px;
+    height: 20px;
+}
+.icon_24px {
+    width: 24px;
+    height: 24px;
+}
+.icon_32px {
+    width: 32px;
+    height: 32px;
+}
+.icon_84px {
+    width: 84px;
+    height: 84px;
+}
+.topLogo{
+    width: 96px;
+    height: 34px;
+}
+
+.loginPop  .topLogo{
+    width: 138px;
+    height: 50px;
+}
+    
   
 
 /* 전체 요소에 적용될 스타일 */
@@ -198,7 +222,7 @@ html, body {
 	-webkit-user-select: none;
 	-khtml-user-select: none;
 	user-select: none;
-    background-color: var(--Color-Light-Blue);
+    background-color: var(--Color-Blue-100);
 
     /* overflow-x: hidden;
     overflow-y: hidden; */
@@ -209,43 +233,16 @@ body::-webkit-scrollbar {
 }
 
 
-/* Color Set */
-:root {
-    /* 기본 색상 */
-    --Color-White: #FFFFFF;
-    --Color-Black: #000000;
-    --Color-Main-Black: #141519;
-
-    /* 회색 계열 */
-    --Color-Light-Gray-1: #F8F9FC;
-    --Color-Light-Gray-2: #D9D9D9;
-    --Color-Light-Gray-3: #DBDBDB;
-    --Color-Light-Gray-4: #DADADA;
-    --Color-Light-Gray-5: #BCC2C9;
-    --Color-Medium-Gray: #999999;
-    --Color-Dark-Gray: #30374D;
-    --Color-Darker-Gray: #555555;
-    --Color-Black-Gray: #0E0E0E;
-
-    /* 기타 색상 */
-    --Color-Purple: #AE8CE8;
-    --Color-Light-Blue: #EFF5F8;
-    --Color-Blue: #287EFC;
-
-    /* 버튼 색상 */
-    --Button-White: #FFFFFF;
-    --Button-White-Line: #B2B5BF;
-    --Button-Black-Background: #30374D;
-    --Button-Gray-Background: #D9D9D9;
-}
+    
 /* 기본 색상 변수 정의 */
 :root {
     --Color-White: #FFFFFF;
     --Color-Black: #000000;
-
+    
     --Color-Main-Black: #141519;
     --Color-Main-Purple: #AE8CE8;
     --Color-Main-Blue: #287EFC; 
+
     --Color-Gray-100: #F8F9FC;
     --Color-Gray-200: #DADADA;
     --Color-Gray-300: #D9D9D9;
@@ -257,6 +254,13 @@ body::-webkit-scrollbar {
     --Color-Gray-900: #BCC2C9;
 
     --Color-Blue-100: #EFF5F8;
+
+
+    /* 버튼 색상 */
+    --Button-White: #FFFFFF;
+    --Button-White-Line: #B2B5BF;
+    --Button-Black-Background: #30374D;
+    --Button-Gray-Background: #D9D9D9;
 }
 
 /* 색상 클래스 정의 */
@@ -274,6 +278,10 @@ body::-webkit-scrollbar {
 
 .mainPurple {
     color: var(--Color-Main-Purple);
+}
+
+.mainBlue {
+    color: var(--Color-Main-Blue);
 }
 
 /* 회색 계열 */
@@ -333,6 +341,12 @@ body::-webkit-scrollbar {
     .bold_32px {
         font-size: 32px;
     }
+    .bold_36px{
+        font-size: 36px;
+    }
+    .medium_14px {
+        font-size: 16px;
+    }
     .medium_16px {
         font-size: 16px;
     }
@@ -352,6 +366,10 @@ body::-webkit-scrollbar {
     .icon_12px {
         width: 12px;
         height: 12px;
+    }
+    .icon_16px{
+        width: 16px;
+        height: 16px;
     }
     .icon_20px {
         width: 20px;
@@ -373,6 +391,10 @@ body::-webkit-scrollbar {
         width: 96px;
         height: 34px;
     }
+    .loginPop  .topLogo{
+        width: 138px;
+        height: 50px;
+    }
 
     
 }
@@ -386,10 +408,16 @@ body::-webkit-scrollbar {
         font-size: 15px;
     }
     .bold_20px {
-        font-size: 18px;
+        font-size: 19px;
     }
     .bold_32px {
-        font-size: 24px;
+        font-size: 31px;
+    }
+    .bold_36px{
+        font-size: 35px;
+    }
+    .medium_14px {
+        font-size: 13px;
     }
     .medium_16px {
         font-size: 15px;
@@ -404,33 +432,46 @@ body::-webkit-scrollbar {
         font-size: 15px;
     }
     .regular_12px {
-        font-size: 12px;
+        font-size: 11px;
     }
     .icon_12px {
         width: 10px;
         height: 10px;
+    }
+    .icon_16px{
+        width: 14px;
+        height: 14px;
     }
     .icon_20px {
         width: 18px;
         height: 18px;
     }
     .icon_24px {
-        width: 20px;
-        height: 20px;
+        width: 22px;
+        height: 22px;
     }
     .icon_32px {
-        width: 24px;
-        height: 24px;
+        width: 30px;
+        height: 30px;
     }
     .icon_84px {
-        width: 60px;
-        height: 60px;
+        width: 82px;
+        height: 82px;
     }
     .topLogo{
         width: 96px;
         height: 34px;
     }
+    .loginPop  .topLogo{
+        width: 138px;
+        height: 50px;
+    }
+
+    .homeBox .main06 > .buttonBox {
+        left: 35.3% !important;
+    }
 }
+
 
 /* 일반 핸드폰 크기 (767px 이하) */
 @media (max-width: 767px) {
@@ -443,8 +484,14 @@ body::-webkit-scrollbar {
     .bold_20px {
         font-size: 16px;
     }
-    .bold_32px {
-        font-size: 28px;
+    .bold_32px{
+        font-size: 20px;
+    }
+    .bold_36px{
+        font-size: 32px;
+    }
+    .medium_14px {
+        font-size: 10px;
     }
     .medium_16px {
         font-size: 12px;
@@ -464,6 +511,10 @@ body::-webkit-scrollbar {
     .icon_12px {
         width: 8px;
         height: 8px;
+    }
+    .icon_16px{
+        width: 12px;
+        height: 12px;
     }
     .icon_20px {
         width: 16px;
@@ -485,6 +536,10 @@ body::-webkit-scrollbar {
         width: 85px;
         height: 23px;
     }
+    .loginPop  .topLogo{
+        width: 127px;
+        height: 49px;
+    }
 
     .leftMenuBox {
         display: none;
@@ -496,8 +551,9 @@ body::-webkit-scrollbar {
     .homeBox > .title{
         margin: 10px 20px !important;
     }
-}
 
+  
+}
 
 /*공통*/
 .svg_default {
@@ -507,16 +563,14 @@ body::-webkit-scrollbar {
 	display: inline-block;
 	vertical-align: middle;
 }
+
 /* 스크롤바*/
 .div-scroll-y {
     overflow-y: scroll;
     scroll-behavior: smooth;
- }
-  
-/* 스크롤바 숨기기 - 테스트에서는 영역 봐야해서 우선은 주석 처리*/
-.div-scroll-y::-webkit-scrollbar {
-    /*display: none; /* Chrome, Safari, Opera*/
+    height: 100vh; /* 화면 전체 높이를 차지 */
 }
+  
 
 /*header*/
 .topLogo {
@@ -527,9 +581,11 @@ body::-webkit-scrollbar {
     display: inline-block;
     vertical-align: middle;
 }
+
 header{
     background-color: var(--Color-White);
 }
+
 .headerBox{
     display: flex;
     align-items: center;
@@ -541,7 +597,6 @@ header{
 
 /*left menu*/
 
- /* Left 메뉴 스타일 */
 .leftMenuBox {
     background-color: var(--Color-Blue-100);
     min-width: 200px;
@@ -577,6 +632,126 @@ header{
     color: var(--Color-Main-Blue);
 }
 
+
+input.button-White {
+    padding: 6px 16px;
+    background-color: var(--Button-White);
+    border: 1px solid var(--Button-White-Line);
+    color: var(--Color-Black); /* 글씨 색상 */
+    cursor: pointer;
+    border-radius: 8px;
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box; /* 패딩 포함된 박스 크기 */
+}
+
+input.button-White:active {
+    background-color: var(--Color-Gray-100)
+}
+
+input.button-White:hover {
+    background-color: var(--Color-Gray-200); /* hover 시 배경 색상 변경 */
+}
+
+.button-Black {
+    background-color: var(--Button-Black-Background);
+    color: var(--Color-White);
+    padding: 6px 16px;
+    border: 1px solid var(--Button-Black-Background);
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.button-Black:active {
+    opacity: 0.9;
+}
+
+
+.button-Blue{
+    width: -webkit-fill-available;
+    padding: 12px;
+    border-radius: 8px;
+    border: 0px;
+    color: var(--Color-White);
+    background-color: var(--Color-Main-Blue);
+}
+
+.button-Blue:active {
+     opacity: 0.9;
+}
+
+
+.button-Gray {
+    background-color: var(--Button-Gray-Background);
+    color: var(--Color-White);
+    padding: 6px 16px;
+    border: 1px solid var(--Button-Gray-Background);
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.button-Gray:active {
+    opacity: 0.9;
+}
+.Gray-clicked{
+    background-color: var(--Button-Black-Background);
+}
+
+
+
+
+
+/* 기본 상태 (체크되지 않았을 때) */
+input[type="checkbox"] {
+    cursor: pointer;
+    border-radius: 4px;
+    min-width: 16px ;
+}
+
+/* 체크박스가 선택되었을 때 */
+input[type="checkbox"]:checked {
+    background-color: var(--Color-Main-Blue);
+    background-image: url('../icon/checkBoxIcon.svg'); /* 체크 아이콘 이미지 경로 */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* 체크박스가 체크되지 않았을 때 */
+input[type="checkbox"]:not(:checked) {
+    background-color: var(--Button-White); /* 기본 배경 색상 */
+    border: 1px solid var(--Color-Gray-400); /* 기본 테두리 색상 */
+}
+
+/* 체크박스가 체크되지 않았을 때 */
+input[type="checkbox"]:not(:checked) {
+    background-color: var(--Button-White); /* 기본 배경 색상 */
+    border: 1px solid var(--Color-Gray-400); /* 기본 테두리 색상 */
+}
+
+.xIcon{
+    background-image: url("../icon/xIcon.svg");
+ }
+ 
+.pop .xIcon {
+    margin-left: auto;
+}
+
+.checkIcon{
+    background-image: url("../icon/checkIcon.svg");
+    margin-top: 4px;
+}
+
+.arrowRightwhiteIcon{
+    background-image: url("../icon/arrowRightwhiteIcon.svg");
+}
+ 
+.arrowRightBlackIcon{
+    background-image: url("../icon/arrowRightBlackIcon.svg");
+}
+
 /*main*/
 main{
     display: flex;
@@ -594,27 +769,108 @@ main >section{
 /*home*/
 .homeBox{
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: column; /* 세로로 정렬 */
+    /*unicode-bidi: isolate;*/
+    text-align: left;
     padding: 0 0 0 40px;
 }
 .homeBox > .title{
     margin: 20px 0 ;
+    display: flex;
+    text-align: left;
 }
 
-.homeBox > article{
+.homeBox article {
     background-color: var(--Color-Main-Black);
+}
+
+.homeBox article > div {
+    position: relative; /* 부모 요소를 상대적으로 설정 */
+    width: 100%; /* 부모 요소의 너비에 맞게 조정 */
+    overflow: hidden; /* 이미지가 부모 요소를 넘어가지 않도록 설정 */
+}
+
+.homeBox article > div img {
+    width: 100%; /* 부모 요소의 너비에 맞게 조정 */
+    height: auto; /* 비율 유지 */
+    object-fit: cover; /* 이미지가 부모 요소를 꽉 채우도록 설정 */
+}
+.homeBox .main01 > img{
+    content: url(../img/main1.png);
+}
+.homeBox .main02 > img{
+    content: url(../img/main2.png);
+}
+.homeBox .main03 > img{
+    content: url(../img/main3.png);
+}
+.homeBox .main04 > img{
+    content: url(../img/main4.png);
+}
+.homeBox .main05 > img{
+    content: url(../img/main5.png);
+}
+.homeBox .main06 > img{
+    content: url(../img/main6.png);
+}
+
+.homeBox .main03 > .buttonBox {
+    position: absolute;
+    top: 84%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
     display: flex;
-    flex-wrap: wrap;
-    gap: 0px; /* 이미지 간격 조정 */
-    box-sizing: border-box;
+    width: 100%;
+    justify-content: center;
 }
-.homeBox > article > img {
-    flex: 1 1 auto; /* 가로 크기를 자동으로 조절 */
-    max-width: 100%; /* 이미지의 최대 너비를 부모 요소의 너비로 제한 */
-    height: auto; /* 이미지 비율 유지 */
-    object-fit: cover; /* 이미지의 비율을 유지하면서 부모 요소에 맞게 크기 조절 */
+
+.homeBox .main06 > .buttonBox {
+    position: absolute;
+    top: 69%;
+    left: 31.3%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
 }
+
+
+.homeBox .button-White {
+    width: auto;
+    min-width: 148px;
+    padding: 10px 8px;
+    border-radius: 8px;
+    border: 0px;
+    background-color: var(--Button-White);
+    color: var(--Color-Black);
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.homeBox .button-White:active {
+    background-color: var(--Color-Gray-200)
+}
+
+.homeBox .button-Blue{
+    width: auto;
+    min-width: 148px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 0px;
+    color: var(--Color-White);
+    background-color: var(--Color-Main-Blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.homeBox .button-Blue:active {
+    opacity: 0.9;
+
+}
+
 
 /* videos */
 .watchVideo {
@@ -701,7 +957,7 @@ main >section{
 }
 
 .watchVideo .videoList th {
-    background-color: var(--Color-Light-Gray-1);
+    background-color: var(--Color-Gray-100);
 }
 
 .watchVideo .videoList td {
@@ -826,7 +1082,7 @@ main >section{
 }
 
 .watchVideo .myVideoList th {
-    background-color: var(--Color-Light-Gray-1);
+    background-color: var(--Color-Gray-100);
 }
 
 .watchVideo .myVideoList td {
@@ -863,7 +1119,7 @@ main >section{
     display: block;
     width: 100%;
     height: 100%;
-    background-color: var(--Color-Light-Blue);
+    background-color: var(--Color-Blue-100);
     border: 1px solid var(--Color-Gray-900);
 
     border-radius: 30px;
@@ -877,7 +1133,7 @@ main >section{
     left: 3px;
     width: 24px;
     height: 24px;
-    background-color: var(--Color-Dark-Gray);
+    background-color: var(--Color-Gray-700);
     border-radius: 50%;
     transition: all 0.3s;
 }
@@ -887,7 +1143,7 @@ main >section{
     top: 50%;
     transform: translateY(-50%);
     font-size: 12px;
-    color: var(--Color-Darker-Gray);
+    color: var(--Color-Gray-600);
     width: 30px;
     text-align: center;
 }
@@ -975,7 +1231,7 @@ input:not(:checked) + .switch-label .switch-on {
 }
 
 .pagination .active {
-    background-color: var(--Color-Blue);
+    background-color: var(--Color-Main-Blue);
 }
 
 .pagination .active a {
@@ -1093,7 +1349,7 @@ input:not(:checked) + .switch-label .switch-on {
     text-align: center;
     margin: 25px auto 0;
     padding: 12px 24px;
-    background-color: var(--Color-Blue);
+    background-color: var(--Color-Main-Blue);
     color: var(--Color-White);
     border: none;
     border-radius: 8px;
@@ -1204,7 +1460,7 @@ input:not(:checked) + .switch-label .switch-on {
     text-align: center;
     margin: 25px auto 0;
     padding: 12px 24px;
-    background-color: var(--Color-Blue);
+    background-color: var(--Color-Main-Blue);
     color: var(--Color-White);
     border: none;
     border-radius: 8px;
@@ -1239,7 +1495,7 @@ input:not(:checked) + .switch-label .switch-on {
 .pop input[type="text"]::placeholder,
 .pop input[type="password"]::placeholder {
     text-align: left;
-    color: var(--Color-Gray-600);
+    color: var(--Color-Gray-500);
 }
 
 /* input 스타일 */
@@ -1252,7 +1508,7 @@ input:not(:checked) + .switch-label .switch-on {
     text-align: left;
 }
 .memberJoinPop > .popHeader{
-    border-bottom: 1px solid var(--Color-Dark-Gray);
+    border-bottom: 1px solid var(--Color-Gray-700);
     padding: 4px 0;
 }
 
@@ -1270,67 +1526,211 @@ input:not(:checked) + .switch-label .switch-on {
 }
 .memberJoinPop > .popBody > div > .regular_12px{
     text-align: left;
+    margin-top: 3px;
 }
 
 .memberJoinPop > .popfooter {
-     margin: 34px 0 0 0;
- }
-.memberJoinPop > .popfooter a{
-   color: var(--Color-Blue);
+    margin: 34px 0 0 0;
+}
+.memberJoinPop > .popfooter input{
+   margin: 4px 0 0 0;
 }
 .memberJoinPop > .popfooter div{
-    margin-bottom: 12px;
- }
+   margin-bottom: 12px;
+}
 .memberJoinPop  > .popfooter .checkDiv{
-    display: flex;
-    align-items: flex-start;
+   display: flex;
+   align-items: flex-start;
 }
 
 .memberJoinPop > .popfooter >.checkDiv  div {
-    text-align: left;
-    margin-left: 8px;
+   text-align: left;
+   margin-left: 8px;
 }
 
 
 
 /* 기본 상태 (체크되지 않았을 때) */
 input[type="checkbox"] {
-    cursor: pointer;
-    border-radius: 4px;
-    min-width: 16px ;
+   cursor: pointer;
+   border-radius: 4px;
+   min-width: 16px ;
 }
 
 /* 체크박스가 선택되었을 때 */
 input[type="checkbox"]:checked {
-    background-color: var(--Color-Blue);
-    background-image: url('../icon/checkBoxIcon.svg'); /* 체크 아이콘 이미지 경로 */
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+   background-color: var(--Color-Main-Blue);
+   background-image: url('../icon/checkBoxIcon.svg'); /* 체크 아이콘 이미지 경로 */
+   background-size: contain;
+   background-position: center;
+   background-repeat: no-repeat;
 }
 
 /* 체크박스가 체크되지 않았을 때 */
 input[type="checkbox"]:not(:checked) {
-    background-color: var(--Button-White); /* 기본 배경 색상 */
-    border: 1px solid var(--Color-Gray-400); /* 기본 테두리 색상 */
+   background-color: var(--Button-White); /* 기본 배경 색상 */
+   border: 1px solid var(--Color-Gray-400); /* 기본 테두리 색상 */
 }
 
 /* 체크박스가 체크되지 않았을 때 */
 input[type="checkbox"]:not(:checked) {
-    background-color: var(--Button-White); /* 기본 배경 색상 */
-    border: 1px solid var(--Color-Gray-400); /* 기본 테두리 색상 */
+   background-color: var(--Button-White); /* 기본 배경 색상 */
+   border: 1px solid var(--Color-Gray-400); /* 기본 테두리 색상 */
 }
 
 
-.button-Blue{
-    width: -webkit-fill-available;
-    padding: 12px;
-    border-radius: 8px;
-    border: 0px;
-    color: var(--Color-White);
-    background-color: var(--Color-Blue);
+.loginPop .titleBox{
+   margin: 20px 0 ;
 }
 
-.button-Blue:active {
-    background-color: var(--Color-Blue-100); /* 클릭 시 진한 배경색 */
+.loginPop .popBody .inputBox > input{
+   margin: 10px 0 ;
+}
+
+.loginPop .popBody .btnBox{
+   margin: 12px 0 0 0;
+}
+
+.loginPop .popBody .aTagBox{
+   margin: 16px 0;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.loginPop .popfooter{
+   margin: 32px;
+   display: flex;
+   justify-content: center;
+}
+
+.loginPop .popfooter .button-Black{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.loginPop .popfooter .button-Black > div{
+   background-image: url('../../common/icon/messageIcon.svg'); /* 이미지 경로 */
+   margin-right: 4px;
+}
+
+/* a 태그에 .mainBlue 클래스가 적용되었을 때만 밑줄 적용 */
+a.mainBlue {
+   text-decoration: underline;
+   text-decoration-color: var(--Color-Main-Blue); /* 원하는 밑줄 색상으로 변경 */
+   text-decoration-thickness: 1px;
+   text-underline-offset: 2px;
+}
+.findPasswordPop .popHeader > div{
+   margin-bottom: 14px;
+}
+
+.findPasswordPop .popBody{
+   margin: 40px 0 ;
+}
+
+.findPasswordPop .popfooter{
+   text-align: left;
+}
+.findPasswordPop .popfooter > *{
+   margin-bottom: 16px;
+}
+
+.hiddenInput{
+   border: 0px !important;
+   padding: 0 !important;
+   width: auto !important;
+}
+
+.checkPolicyPop .popHeader{
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+}
+
+
+.checkPolicyPop .popBody{
+   margin: 12px 0 44px 0;
+}
+
+.checkPolicyPop .popBody div{
+   text-align: left;
+}
+.checkPolicyPop .popBody{
+    margin: 12px 0 44px 0;
+ }
+
+.checkPolicyPop .popBody > .title{
+    margin-bottom: 40px;
+}
+
+.checkPolicyPop .popBody > .checkBox{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: 18px;
+}
+
+.checkPolicyPop .popBody > .checkBox > input{
+    margin: 4px 10px 0 0;
+}
+
+.checkPolicyPop .popfooter{
+   display: flex;
+   align-items: center;
+   flex-direction: row;
+   justify-content: space-between;
+   width: 100%;
+}
+
+.checkPolicyPop .popfooter >input{ 
+   width: 48%;
+}
+
+.videoUpdatePop .popHeader {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.videoUpdatePops .popBody {
+    margin: 12px 0 44px 0;
+}
+
+.videoUpdatePop .popBody > .checkBox {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 18px 0;
+}
+.videoUpdatePop .popBody > .aTagkBox > .checkIcon {
+    display: none;
+}
+.videoUpdatePop .popBody > .aTagkBox {
+    margin-top: -16px; /* Adjust spacing as needed */
+    text-align: left;
+    display: flex;
+}
+.videoUpdatePop .popBody > .inputBox {
+    margin: 22px 10px;
+}
+
+.videoUpdatePop .popBody div {
+    text-align: left;
+}
+
+.videoUpdatePop .popfooter {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.videoUpdatePop .popfooter >input {
+    width: 43%;
+}
+.all .popfooter{
+    margin-top: 32px;
 }

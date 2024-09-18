@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<title>CheckPolicyPopup</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, usser-scalable=no" name="viewport">
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="../../common/css/common.css"/>
+    <!-- js -->
+	<script type="text/javascript" src="../../common/js/common.js"></script>
+<body>
+    <!-- 메인 콘텐츠 -->
+    <main class="pop div-scroll-y">
+        <section class="checkPolicyPop">
+            <article class="popHeader ">
+                <div class="svg_default icon_24px xIcon"></div>
+                <div class="bold_20px black">아래의 내용을 확인합니다 (1/6)</div>
+            </article>
+            <article class="popBody">
+                <div class="regular_16px gray600">나는 가입할 때 등록한 유튜브 채널의 (                     
+                <input type="text" class="hiddenInput black regular_16px" value=""/>
+                ) <br>입니다.
+            </div>
+            </article>
+            <article class="popfooter">
+                <input class="bold_16px button-White" type="button" value="소유자 (유튜버)" />
+                <input class="bold_16px button-Black" type="button" value="운영 관리자" />
+               
+            </article>
+        </section>
+    </main>
+	<script>
+        // Function to check if all checkboxes are selected
+        function areAllCheckboxesChecked() {
+            const checkboxes = document.querySelectorAll('.checkBox input[type="checkbox"]');
+            return Array.from(checkboxes).every(checkbox => checkbox.checked);
+        }
+
+        // Function to update the button class
+        function updateButtonClass() {
+            const button = document.getElementById('confirmButton');
+                if (areAllCheckboxesChecked()) {
+                button.classList.remove('button-Gray');
+                button.classList.add('button-Black');
+            } else {
+                button.classList.remove('button-Black');
+                button.classList.add('button-Gray');
+            }
+        }
+
+        // Add event listeners to checkboxes
+        document.querySelectorAll('.checkBox input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', updateButtonClass);
+        });
+
+        // Initial check to set button class correctly
+        updateButtonClass();
+    </script>
+ 
+</body>
+</html>

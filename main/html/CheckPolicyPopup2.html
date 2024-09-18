@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<title>CheckPolicyPopup</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, usser-scalable=no" name="viewport">
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="../../common/css/common.css"/>
+    <!-- js -->
+	<script type="text/javascript" src="../../common/js/common.js"></script>
+<body>
+    <!-- 메인 콘텐츠 -->
+    <main class="pop div-scroll-y">
+        <section class="checkPolicyPop">
+            <article class="popHeader ">
+                <div class="svg_default icon_24px xIcon"></div>
+                <div class="bold_20px black">아래의 내용을 확인합니다 (1/6)</div>
+            </article>
+            <article class="popBody">
+                <div class="regular_16px gray600 title">영상 시청을 마치면 ‘매너포인트’를 적립 받습니다.</div>
+                <div class="checkBox">
+                    <input type="checkbox" class="icon_20px">
+                    <div class="regular_14px black">시청을 하면 ‘적립’되고, 다른 회원이 내 영상을 시청<br>
+                        해주면 적립된 포인트에서 ‘소진’ 됩니다.</div>
+                </div>
+                <div class="checkBox">
+                    <input type="checkbox" class="icon_20px">
+                    <div class="regular_14px black">‘매너포인트’는 영상 시청을 마칠 때마다 정산/<br>
+                        적립 됩니다.</div>
+                </div>
+                <div class="checkBox">
+                    <input type="checkbox" class="icon_20px">
+                    <div class="regular_14px black">‘매너포인트’는 시청 완료한 영상의 길이 1분부터<br>
+                        최대 20분까지 사이에서 자동 반영됩니다.<br>
+                        가입시 등록한 채널명을 변경하는 경우, 적립되어 있는<br>
+                        매너포인트 전부가 소멸되고 새 채널을 기준으로<br>
+                        다시 적립이 시작됩니다.</div>
+                </div>
+
+                
+            </article>
+            <article class="popfooter">
+                <input class="bold_16px button-White" type="button" value="아니오 (이전으로)" />
+                <input id="confirmButton" class="bold_16px button-Gray" type="button" value="네. 알겠습니다." />
+               
+            </article>
+        </section>
+    </main>
+	<script>
+        // Function to check if all checkboxes are selected
+        function areAllCheckboxesChecked() {
+            const checkboxes = document.querySelectorAll('.checkBox input[type="checkbox"]');
+            return Array.from(checkboxes).every(checkbox => checkbox.checked);
+        }
+
+        // Function to update the button class
+        function updateButtonClass() {
+            const button = document.getElementById('confirmButton');
+                if (areAllCheckboxesChecked()) {
+                button.classList.remove('button-Gray');
+                button.classList.add('button-Black');
+            } else {
+                button.classList.remove('button-Black');
+                button.classList.add('button-Gray');
+            }
+        }
+
+        // Add event listeners to checkboxes
+        document.querySelectorAll('.checkBox input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', updateButtonClass);
+        });
+
+        // Initial check to set button class correctly
+        updateButtonClass();
+    </script>
+ 
+</body>
+</html>
