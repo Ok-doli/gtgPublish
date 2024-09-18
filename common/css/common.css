@@ -470,6 +470,24 @@ body::-webkit-scrollbar {
     .homeBox .main06 > .buttonBox {
         left: 35.3% !important;
     }
+
+    /* 고정 높이 설정 - 태블릿일 때만 */
+    .VideoWrap {
+        overflow-x: auto; /* 가로 스크롤 활성화 */
+        width: 100%; /* 부모 요소의 너비를 100%로 설정 */
+    }
+    
+    .myVideoList {
+        width: 100%; /* 테이블 너비 설정 */
+        min-width: 1000px; /* 최소 너비 설정 */
+        border-collapse: collapse; /* 테두리가 겹치지 않게 */
+    }
+
+    .videoList {
+        width: 100%; /* 테이블 너비 설정 */
+        min-width: 1000px; /* 최소 너비 설정 */
+        border-collapse: collapse; /* 테두리가 겹치지 않게 */
+    }
 }
 
 
@@ -491,7 +509,7 @@ body::-webkit-scrollbar {
         font-size: 32px;
     }
     .medium_14px {
-        font-size: 10px;
+        font-size: 8px;
     }
     .medium_16px {
         font-size: 12px;
@@ -541,9 +559,42 @@ body::-webkit-scrollbar {
         height: 49px;
     }
 
-    .leftMenuBox {
-        display: none;
+    .hamburger-menu {
+        display: block !important; /* 모바일에서는 햄버거 메뉴를 보이게 함 */
     }
+
+    .leftMenuBox {
+        position: fixed;
+        top: 0;
+        left: -100%; /* 기본적으로 화면 밖에 숨김 */
+        width: 80%; /* 오른쪽 10%는 투명도 영역 */
+        height: 100%;
+        background-color: #fff;
+        z-index: 1000; /* 다른 요소 위에 표시 */
+        transition: left 0.3s ease;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.5); /* 그림자 효과 */
+    }
+    
+    .leftMenuBox.show {
+        left: 0; /* 메뉴가 나타나게 함 */
+    }
+    
+    /* 오른쪽 투명도 영역 */
+    .overlay {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 20%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* 반투명 효과 */
+        z-index: 999; /* 왼쪽 메뉴보다 아래에 표시 */
+        display: none; /* 기본적으로 숨김 */
+    }
+    
+    .overlay.show {
+        display: block;
+    }
+    
     .homeBox {
         padding:  0  !important;
     }
@@ -552,6 +603,49 @@ body::-webkit-scrollbar {
         margin: 10px 20px !important;
     }
 
+
+    .homeBox .main01 > img{
+        content: url(../img/mainMoblie01.png);
+    }
+    .homeBox .main02 > img{
+        content: url(../img/mainMoblie02.png);
+    }
+    .homeBox .main03 > img{
+        content: url(../img/mainMoblie03.png);
+    }
+    .homeBox .main04 > img{
+        content: url(../img/mainMoblie04.png);
+    }
+    .homeBox .main05 > img{
+        content: url(../img/mainMoblie05.png);
+    }
+    .homeBox .main06 > img{
+        content: url(../img/mainMoblie06.png);
+    }
+    .homeBox .button-White {
+        width: auto;
+        min-width: 88px !important;
+        padding: 6px 8px  !important;
+    }
+
+    .homeBox .button-Blue{
+        width: auto;
+        min-width: 88px  !important;
+        padding: 6px 8px !important;
+    }
+
+    .homeBox .main06 > .buttonBox {
+        left: 23.3% !important;
+    }
+
+    .homeBox .icon_20px {
+        width: 12px;
+        height: 12px;
+    }
+
+    body::-webkit-scrollbar {
+        display: inline;
+    }
   
 }
 
@@ -584,6 +678,11 @@ body::-webkit-scrollbar {
 
 header{
     background-color: var(--Color-White);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 .headerBox{
@@ -594,6 +693,12 @@ header{
     border-bottom: 1px solid var(--Color-Gray-300) ;
 }
 
+/* 햄버거 메뉴 */
+.hamburger-menu {
+    display: none; /* 기본적으로 PC 버전에서는 숨김 */
+    cursor: pointer;
+    margin-right: 12px; /* 여백 조정 */
+}
 
 /*left menu*/
 
@@ -758,6 +863,7 @@ main{
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: row;
+    padding-top: 40px;
 }
 main >section{
     width: -webkit-fill-available;
@@ -794,24 +900,6 @@ main >section{
     width: 100%; /* 부모 요소의 너비에 맞게 조정 */
     height: auto; /* 비율 유지 */
     object-fit: cover; /* 이미지가 부모 요소를 꽉 채우도록 설정 */
-}
-.homeBox .main01 > img{
-    content: url(../img/main1.png);
-}
-.homeBox .main02 > img{
-    content: url(../img/main2.png);
-}
-.homeBox .main03 > img{
-    content: url(../img/main3.png);
-}
-.homeBox .main04 > img{
-    content: url(../img/main4.png);
-}
-.homeBox .main05 > img{
-    content: url(../img/main5.png);
-}
-.homeBox .main06 > img{
-    content: url(../img/main6.png);
 }
 
 .homeBox .main03 > .buttonBox {
@@ -875,7 +963,7 @@ main >section{
 /* videos */
 .watchVideo {
     padding: 40px;
-    height: 100%;
+    /*height: 100vh;*/
 }
 
 .watchVideo * {
@@ -886,6 +974,7 @@ main >section{
     display : flex;
     margin: 0;
     min-width: 145px; /* 최소 단위를 넣어서 모바일에서 줄바꿈 방지 */
+    white-space: nowrap;
 }
 .watchVideo .topContent .top-subtitle {
     display : flex;
@@ -1030,6 +1119,7 @@ main >section{
     display : flex;
     margin: 0;
     min-width: 80px; /* 최소 단위를 넣어서 모바일에서 줄바꿈 방지 */
+    white-space: nowrap;
 }
 
 .watchVideo .topContent .MyVid {
@@ -1270,6 +1360,8 @@ input:not(:checked) + .switch-label .switch-on {
 .myInfo > .topContent > .top-title {
     display : flex;
     margin: 0;
+    white-space: nowrap;
+    margin-right: 20px; 
 }
 .myInfo > .topContent > .top-subtitle {
     display : flex;
@@ -1280,10 +1372,6 @@ input:not(:checked) + .switch-label .switch-on {
 .myInfo > .topContent {
     display: flex;
     align-items: baseline;
-}
-
-.myInfo > .topContent > .top-title {
-    margin-right: 20px; 
 }
 
 .myInfo > .mid-title {

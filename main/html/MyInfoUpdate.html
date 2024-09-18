@@ -12,6 +12,7 @@
     <!-- 헤더 -->
 	<header>
 		<div class="headerBox">
+            <div class="hamburger-menu bold_20px" onclick="toggleMenu()">☰</div>
 			<div class="topLogo"></div>
 			<div class="bold_14px black">Guest</div>
 		</div>
@@ -30,7 +31,7 @@
         </nav>
 
         <!-- 내 정보 수정 섹션 -->
-        <section class="myInfo">
+        <section class="myInfo div-scroll-y">
             <div class="topContent">
                 <div class="bold_32px top-title">내 정보</div>
                 <div class="regular_14px top-subtitle">회원의 상태와 등록되어 있는 정보를 확인하고 수정할 수 있는 곳입니다.</div>
@@ -95,7 +96,7 @@
                         <th class="medium_16px black">내 정보 수정 시 약관동의</th>
                         <td>
                             <input class="icon_20px"  type="checkbox">
-                            <div>
+                            <div class="regular_16px">
                                 입력된 정보와 실제 계정의 사용자가 다른 경우 발생하는 문제에 대해서 GTG system 보안규정에 따른 민,형사상의 모든 책임을 지는 것에 동의합니다.
                             </div>
                         </td>
@@ -111,9 +112,15 @@
     </main>
     <script>
         // 문서가 로드된 후 실행할 코드
-        document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener('DOMContentLoaded', function() {
             // common.js에서 정의한 함수 호출
             setupMenuClickHandler('.leftMenuBox ul li');
+
+            const overlay = document.createElement('div');
+            overlay.classList.add('overlay');
+            overlay.onclick = toggleMenu; // overlay 클릭 시 메뉴 닫기
+            document.body.appendChild(overlay);
+
         });
     </script>
 

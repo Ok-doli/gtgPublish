@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="ko">
-	<title>GTG Main</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<title>GTG Main</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
-    <!-- css -->
-    <link rel="stylesheet" type="text/css" href="../../common/css/common.css"/>
-    <!-- js -->
-	<script type="text/javascript" src="../../common/js/common.js"></script>
+<!-- css -->
+<link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
+<!-- js -->
+<script type="text/javascript" src="../../common/js/common.js"></script>
+
 <body>
     <!-- 헤더 -->
-	<header>
-		<div class="headerBox">
-			<div class="topLogo"></div>
-			<div class="bold_14px black">Guest</div>
-		</div>
+    <header>
+        <div class="headerBox">
+            <div class="hamburger-menu bold_20px" onclick="toggleMenu()">☰</div>
+            <div class="topLogo"></div>
+            <div class="bold_14px black">Guest</div>
+        </div>
     </header>
 
     <!-- 메인 콘텐츠 -->
     <main>
-		 <!-- Left 메뉴 -->
-		 <nav class="leftMenuBox">
+        <!-- Left 메뉴 -->
+        <nav class="leftMenuBox">
             <ul>
                 <li><a href="../html/Home.html" class="medium_16px">홈</a></li>
                 <li class="active"><a href="../html/Videos.html" class="medium_16px">시청할 영상</a></li>
@@ -30,7 +32,7 @@
         </nav>
 
         <!-- 시청할 영상 섹션 -->
-        <section class="watchVideo">
+        <section class="watchVideo div-scroll-y">
             <div class="topContent">
                 <div class="bold_32px top-title">시청할 영상</div>
                 <div class="regular_14px top-subtitle">다른 회원이 올린 유튜브 영상을 시청하고 매너포인트를 획득하세요. (영상당 10~45포인트)</div>
@@ -40,111 +42,119 @@
                 <ul class="regular_16px mid-list">
                     <li><span class="bold_16px">시청하기</span> 버튼을 클릭하면 새 창이 뜨고 유튜브 영상이 재생됩니다.</li>
                     <li>클릭한 영상의 남은 시간이 끝나야 다음 영상을 시청할 수 있습니다.</li>
-                    <li>시청 규칙을 준수하지 않을 경우 획득한 포인트가 환수되거나 임의 탈퇴될 수 있습니다. <a href="#" class="bold_16px">(GTG 이용 규칙)</a></li>
+                    <li>시청 규칙을 준수하지 않을 경우 획득한 포인트가 환수되거나 임의 탈퇴될 수 있습니다. <a href="#" class="bold_16px">(GTG 이용 규칙)</a>
+                    </li>
                 </ul>
             </div>
-
-            <!-- 테이블 구조 -->
-            <table class="videoList">
-                <thead>
-                    <tr>
-                        <th class="medium_16px">번호</th>
-                        <th class="medium_16px">제목</th>
-                        <th class="medium_16px">영상길이</th>
-                        <th class="medium_16px">미리보기 이미지</th>
-                        <th class="medium_16px">포인트 얻기</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="regular_16px">1</td>
-                        <td class="regular_16px">(Vlog) 브이로그 열세번째 이야기(모든 계획이 무산되어 장보고 집에왔다)</td>
-                        <td class="regular_16px">00:00:00</td>
-                        <td><img src="../../common/img/preview1.png" alt="Preview 1" class="preview-image"></td>
-                        <td>
-                            <div class="points-container">
-                                <input class="bold_16px button-Black" type="button" value="시청하기"></button>
-                                <span class="regular_16px points-text">시청 후 내 영상이 1000명에게 홍보돼요</span>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="regular_16px">2</td>
-                        <td class="regular_16px">(Vlog) 브이로그 열세번째 이야기(모든 계획이 무산되어 장보고 집에왔다)</td>
-                        <td class="regular_16px">00:00:00</td>
-                        <td><img src="../../common/img/preview2.png" alt="Preview 1" class="preview-image"></td>
-                        <td>
-                            <div class="points-container">
-                                <input class="bold_16px button-Black" type="button" value="시청하기"></button>
-                                <span class="regular_16px points-text">시청 후 내 영상이 1000명에게 홍보돼요</span>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="regular_16px">3</td>
-                        <td class="regular_16px">(Vlog) 브이로그 열세번째 이야기(모든 계획이 무산되어 장보고 집에왔다)</td>
-                        <td class="regular_16px">00:00:00</td>
-                        <td><img src="../../common/img/preview3.png" alt="Preview 1" class="preview-image"></td>
-                        <td>
-                            <div class="points-container">
-                                <input class="bold_16px button-Black" type="button" value="시청하기"></button>
-                                <span class="regular_16px points-text">시청 후 내 영상이 1000명에게 홍보돼요</span>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="regular_16px">4</td>
-                        <td class="regular_16px">(Vlog) 브이로그 열세번째 이야기(모든 계획이 무산되어 장보고 집에왔다)</td>
-                        <td class="regular_16px">00:00:00</td>
-                        <td><img src="../../common/img/preview4.png" alt="Preview 1" class="preview-image"></td>
-                        <td>
-                            <div class="points-container">
-                                <input class="bold_16px button-Black" type="button" value="시청하기"></button>
-                                <span class="regular_16px points-text">시청 후 내 영상이 1000명에게 홍보돼요</span>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="regular_16px">5</td>
-                        <td class="regular_16px">(Vlog) 브이로그 열세번째 이야기(모든 계획이 무산되어 장보고 집에왔다)</td>
-                        <td class="regular_16px">00:00:00</td>
-                        <td><img src="../../common/img/preview5.png" alt="Preview 1" class="preview-image"></td>
-                        <td>
-                            <div class="points-container">
-                                <input class="bold_16px button-Black" type="button" value="시청하기"></button>
-                                <span class="regular_16px points-text">시청 후 내 영상이 1000명에게 홍보돼요</span>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="regular_16px">6</td>
-                        <td class="regular_16px">(Vlog) 브이로그 열세번째 이야기(모든 계획이 무산되어 장보고 집에왔다)</td>
-                        <td class="regular_16px">00:00:00</td>
-                        <td><img src="../../common/img/preview6.png" alt="Preview 1" class="preview-image"></td>
-                        <td>
-                            <div class="points-container">
-                                <input class="bold_16px button-Black" type="button" value="시청하기"></button>
-                                <span class="regular_16px points-text">시청 후 내 영상이 1000명에게 홍보돼요</span>
-                            </div>
-                        </td>
-                    </tr>
-                    <!-- 추가된 항목 -->
-                </tbody>
-            </table>
-            
+            <div class="VideoWrap">
+                <!-- 테이블 구조 -->
+                <table class="videoList">
+                    <thead>
+                        <tr>
+                            <th class="medium_16px">번호</th>
+                            <th class="medium_16px">제목</th>
+                            <th class="medium_16px">영상길이</th>
+                            <th class="medium_16px">미리보기 이미지</th>
+                            <th class="medium_16px">포인트 얻기</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="regular_16px">1</td>
+                            <td class="regular_16px">(Vlog) 브이로그 열세번째 이야기(모든 계획이 무산되어 장보고 집에왔다)</td>
+                            <td class="regular_16px">00:00:00</td>
+                            <td><img src="../../common/img/preview1.png" alt="Preview 1" class="preview-image"></td>
+                            <td>
+                                <div class="points-container">
+                                    <input class="bold_16px button-Black" type="button" value="시청하기"></button>
+                                    <span class="regular_16px points-text">시청 후 내 영상이 1000명에게 홍보돼요</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="regular_16px">2</td>
+                            <td class="regular_16px">(Vlog) 브이로그 열세번째 이야기(모든 계획이 무산되어 장보고 집에왔다)</td>
+                            <td class="regular_16px">00:00:00</td>
+                            <td><img src="../../common/img/preview2.png" alt="Preview 1" class="preview-image"></td>
+                            <td>
+                                <div class="points-container">
+                                    <input class="bold_16px button-Black" type="button" value="시청하기"></button>
+                                    <span class="regular_16px points-text">시청 후 내 영상이 1000명에게 홍보돼요</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="regular_16px">3</td>
+                            <td class="regular_16px">(Vlog) 브이로그 열세번째 이야기(모든 계획이 무산되어 장보고 집에왔다)</td>
+                            <td class="regular_16px">00:00:00</td>
+                            <td><img src="../../common/img/preview3.png" alt="Preview 1" class="preview-image"></td>
+                            <td>
+                                <div class="points-container">
+                                    <input class="bold_16px button-Black" type="button" value="시청하기"></button>
+                                    <span class="regular_16px points-text">시청 후 내 영상이 1000명에게 홍보돼요</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="regular_16px">4</td>
+                            <td class="regular_16px">(Vlog) 브이로그 열세번째 이야기(모든 계획이 무산되어 장보고 집에왔다)</td>
+                            <td class="regular_16px">00:00:00</td>
+                            <td><img src="../../common/img/preview4.png" alt="Preview 1" class="preview-image"></td>
+                            <td>
+                                <div class="points-container">
+                                    <input class="bold_16px button-Black" type="button" value="시청하기"></button>
+                                    <span class="regular_16px points-text">시청 후 내 영상이 1000명에게 홍보돼요</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="regular_16px">5</td>
+                            <td class="regular_16px">(Vlog) 브이로그 열세번째 이야기(모든 계획이 무산되어 장보고 집에왔다)</td>
+                            <td class="regular_16px">00:00:00</td>
+                            <td><img src="../../common/img/preview5.png" alt="Preview 1" class="preview-image"></td>
+                            <td>
+                                <div class="points-container">
+                                    <input class="bold_16px button-Black" type="button" value="시청하기"></button>
+                                    <span class="regular_16px points-text">시청 후 내 영상이 1000명에게 홍보돼요</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="regular_16px">6</td>
+                            <td class="regular_16px">(Vlog) 브이로그 열세번째 이야기(모든 계획이 무산되어 장보고 집에왔다)</td>
+                            <td class="regular_16px">00:00:00</td>
+                            <td><img src="../../common/img/preview6.png" alt="Preview 1" class="preview-image"></td>
+                            <td>
+                                <div class="points-container">
+                                    <input class="bold_16px button-Black" type="button" value="시청하기"></button>
+                                    <span class="regular_16px points-text">시청 후 내 영상이 1000명에게 홍보돼요</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- 추가된 항목 -->
+                    </tbody>
+                </table>
+            </div>
             <div class="button-White">
                 <input class="medium_16px" type="button" value="영상 새로고침"></button>
             </div>
         </section>
 
     </main>
-	<script>
+    <script>
         // 문서가 로드된 후 실행할 코드
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // common.js에서 정의한 함수 호출
             setupMenuClickHandler('.leftMenuBox ul li');
+
+            const overlay = document.createElement('div');
+            overlay.classList.add('overlay');
+            overlay.onclick = toggleMenu; // overlay 클릭 시 메뉴 닫기
+            document.body.appendChild(overlay);
+
         });
     </script>
- 
+
 </body>
+
 </html>

@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="ko">
-	<title>GTG Main</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<title>GTG Main</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
-    <!-- css -->
-    <link rel="stylesheet" type="text/css" href="../../common/css/common.css"/>
-    <!-- js -->
-	<script type="text/javascript" src="../../common/js/common.js"></script>
+<!-- css -->
+<link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
+<!-- js -->
+<script type="text/javascript" src="../../common/js/common.js"></script>
+
 <body>
     <!-- 헤더 -->
-	<header>
-		<div class="headerBox">
-			<div class="topLogo"></div>
-			<div class="bold_14px black">Guest</div>
-		</div>
+    <header>
+        <div class="headerBox">
+            <div class="hamburger-menu bold_20px" onclick="toggleMenu()">☰</div>
+            <div class="topLogo"></div>
+            <div class="bold_14px black">Guest</div>
+        </div>
     </header>
 
     <!-- 메인 콘텐츠 -->
     <main>
-		 <!-- Left 메뉴 -->
-		 <nav class="leftMenuBox">
+        <!-- Left 메뉴 -->
+        <nav class="leftMenuBox">
             <ul>
                 <li><a href="../html/Home.html" class="medium_16px">홈</a></li>
                 <li><a href="../html/Videos.html" class="medium_16px">시청할 영상</a></li>
@@ -30,7 +32,7 @@
         </nav>
 
         <!-- 내 영상 섹션 -->
-        <section class="watchVideo">
+        <section class="watchVideo div-scroll-y">
             <div class="topContent">
                 <div class="bold_32px top-title MyVid">내 영상</div>
                 <div class="regular_14px top-subtitle">다른 회원들이 시청할 내 유튜브 영상을 등록하세요.(시청당 10포인트 차감)</div>
@@ -53,151 +55,153 @@
                 </div>
             </div>
 
-            <!-- 테이블 구조 -->
-            <table class="myVideoList">
-                <thead>
-                    <tr>
-                        <th class="medium_16px">번호</th>
-                        <th class="medium_16px">등록일</th>
-                        <th class="medium_16px">제목</th>
-                        <th class="medium_16px">영상길이</th>
-                        <th class="medium_16px">미리보기 이미지</th>
-                        <th class="medium_16px">GTG 시청수</th>
-                        <th class="medium_16px">보기</th>
-                        <th class="medium_16px">노출제어</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="regular_16px">1</td>
-                        <td class="regular_16px">2024-08-01 00:00:00</td>
-                        <td class="regular_16px">(Vlog) 브이로그 열세번째 이야기(모든 계획이 무산되어 장보고 집에왔다)</td>
-                        <td class="regular_16px">00:00:00</td>
-                        <td><img src="../../common/img/preview1.png" alt="Preview 1" class="preview-image"></td>
-                        <td class="regular_16px">1000</td>
-                        <td>
-                            <input class="medium_14px button-Black" type="button" value="영상시청"></button>
-                        </td>
-                        <td>
-                            <div class="switch">
-                                <input type="checkbox" id="toggle1" />
-                                <label for="toggle1" class="switch-label" >
-                                    <span class="medium_14px switch-on">ON</span>
-                                    <span class="medium_14px switch-off">OFF</span>
-                                    <span class="switch-slider"></span>
-                                </label>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="regular_16px">2</td>
-                        <td class="regular_16px">2024-08-01 00:00:00</td>
-                        <td class="regular_16px">(Vlog) 브이로그 열세번째 이야기(모든 계획이 무산되어 장보고 집에왔다)</td>
-                        <td class="regular_16px">00:00:00</td>
-                        <td><img src="../../common/img/preview2.png" alt="Preview 1" class="preview-image"></td>
-                        <td class="regular_16px">1000</td>
-                        <td>
-                            <input class="medium_14px button-Black" type="button" value="영상시청"></button>
-                        </td>
-                        <td>
-                            <div class="switch">
-                                <input type="checkbox" id="toggle2" />
-                                <label for="toggle2" class="switch-label" >
-                                    <span class="medium_14px switch-on">ON</span>
-                                    <span class="medium_14px switch-off">OFF</span>
-                                    <span class="switch-slider"></span>
-                                </label>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="regular_16px">3</td>
-                        <td class="regular_16px">2024-08-01 00:00:00</td>
-                        <td class="regular_16px">(Vlog) 브이로그 열세번째 이야기(모든 계획이 무산되어 장보고 집에왔다)</td>
-                        <td class="regular_16px">00:00:00</td>
-                        <td><img src="../../common/img/preview3.png" alt="Preview 1" class="preview-image"></td>
-                        <td class="regular_16px">1000</td>
-                        <td>
-                            <input class="medium_14px button-Black" type="button" value="영상시청"></button>
-                        </td>
-                        <td>
-                            <div class="switch">
-                                <input type="checkbox" id="toggle3" />
-                                <label for="toggle3" class="switch-label" >
-                                    <span class="medium_14px switch-on">ON</span>
-                                    <span class="medium_14px switch-off">OFF</span>
-                                    <span class="switch-slider"></span>
-                                </label>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="regular_16px">4</td>
-                        <td class="regular_16px">2024-08-01 00:00:00</td>
-                        <td class="regular_16px">(Vlog) 브이로그 열세번째 이야기(모든 계획이 무산되어 장보고 집에왔다)</td>
-                        <td class="regular_16px">00:00:00</td>
-                        <td><img src="../../common/img/preview4.png" alt="Preview 1" class="preview-image"></td>
-                        <td class="regular_16px">1000</td>
-                        <td>
-                            <input class="medium_14px button-Black" type="button" value="영상시청"></button>
-                        </td>
-                        <td>
-                            <div class="switch">
-                                <input type="checkbox" id="toggle4" />
-                                <label for="toggle4" class="switch-label" >
-                                    <span class="medium_14px switch-on">ON</span>
-                                    <span class="medium_14px switch-off">OFF</span>
-                                    <span class="switch-slider"></span>
-                                </label>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="regular_16px">5</td>
-                        <td class="regular_16px">2024-08-01 00:00:00</td>
-                        <td class="regular_16px">(Vlog) 브이로그 열세번째 이야기(모든 계획이 무산되어 장보고 집에왔다)</td>
-                        <td class="regular_16px">00:00:00</td>
-                        <td><img src="../../common/img/preview5.png" alt="Preview 1" class="preview-image"></td>
-                        <td class="regular_16px">1000</td>
-                        <td>
-                            <input class="medium_14px button-Black" type="button" value="영상시청"></button>
-                        </td>
-                        <td>
-                            <div class="switch">
-                                <input type="checkbox" id="toggle5" />
-                                <label for="toggle5" class="switch-label" >
-                                    <span class="medium_14px switch-on">ON</span>
-                                    <span class="medium_14px switch-off">OFF</span>
-                                    <span class="switch-slider"></span>
-                                </label>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="regular_16px">6</td>
-                        <td class="regular_16px">2024-08-01 00:00:00</td>
-                        <td class="regular_16px">(Vlog) 브이로그 열세번째 이야기(모든 계획이 무산되어 장보고 집에왔다)</td>
-                        <td class="regular_16px">00:00:00</td>
-                        <td><img src="../../common/img/preview6.png" alt="Preview 1" class="preview-image"></td>
-                        <td class="regular_16px">1000</td>
-                        <td>
-                            <input class="medium_14px button-Black" type="button" value="영상시청"></button>
-                        </td>
-                        <td>
-                            <div class="switch">
-                                <input type="checkbox" id="toggle6" />
-                                <label for="toggle6" class="switch-label" >
-                                    <span class="medium_14px switch-on">ON</span>
-                                    <span class="medium_14px switch-off">OFF</span>
-                                    <span class="switch-slider"></span>
-                                </label>
-                            </div>
-                        </td>
-                    </tr>
-                    <!-- 추가된 항목 -->
-                </tbody>
-            </table>
-            
+            <div class="VideoWrap">
+                <!-- 테이블 구조 -->
+                <table class="myVideoList">
+                    <thead>
+                        <tr>
+                            <th class="medium_16px">번호</th>
+                            <th class="medium_16px">등록일</th>
+                            <th class="medium_16px">제목</th>
+                            <th class="medium_16px">영상길이</th>
+                            <th class="medium_16px">미리보기 이미지</th>
+                            <th class="medium_16px">GTG 시청수</th>
+                            <th class="medium_16px">보기</th>
+                            <th class="medium_16px">노출제어</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="regular_16px">1</td>
+                            <td class="regular_16px">2024-08-01 00:00:00</td>
+                            <td class="regular_16px">(Vlog) 브이로그 열세번째 이야기(모든 계획이 무산되어 장보고 집에왔다)</td>
+                            <td class="regular_16px">00:00:00</td>
+                            <td><img src="../../common/img/preview1.png" alt="Preview 1" class="preview-image"></td>
+                            <td class="regular_16px">1000</td>
+                            <td>
+                                <input class="medium_14px button-Black" type="button" value="영상시청"></button>
+                            </td>
+                            <td>
+                                <div class="switch">
+                                    <input type="checkbox" id="toggle1" />
+                                    <label for="toggle1" class="switch-label">
+                                        <span class="medium_14px switch-on">ON</span>
+                                        <span class="medium_14px switch-off">OFF</span>
+                                        <span class="switch-slider"></span>
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="regular_16px">2</td>
+                            <td class="regular_16px">2024-08-01 00:00:00</td>
+                            <td class="regular_16px">(Vlog) 브이로그 열세번째 이야기(모든 계획이 무산되어 장보고 집에왔다)</td>
+                            <td class="regular_16px">00:00:00</td>
+                            <td><img src="../../common/img/preview2.png" alt="Preview 1" class="preview-image"></td>
+                            <td class="regular_16px">1000</td>
+                            <td>
+                                <input class="medium_14px button-Black" type="button" value="영상시청"></button>
+                            </td>
+                            <td>
+                                <div class="switch">
+                                    <input type="checkbox" id="toggle2" />
+                                    <label for="toggle2" class="switch-label">
+                                        <span class="medium_14px switch-on">ON</span>
+                                        <span class="medium_14px switch-off">OFF</span>
+                                        <span class="switch-slider"></span>
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="regular_16px">3</td>
+                            <td class="regular_16px">2024-08-01 00:00:00</td>
+                            <td class="regular_16px">(Vlog) 브이로그 열세번째 이야기(모든 계획이 무산되어 장보고 집에왔다)</td>
+                            <td class="regular_16px">00:00:00</td>
+                            <td><img src="../../common/img/preview3.png" alt="Preview 1" class="preview-image"></td>
+                            <td class="regular_16px">1000</td>
+                            <td>
+                                <input class="medium_14px button-Black" type="button" value="영상시청"></button>
+                            </td>
+                            <td>
+                                <div class="switch">
+                                    <input type="checkbox" id="toggle3" />
+                                    <label for="toggle3" class="switch-label">
+                                        <span class="medium_14px switch-on">ON</span>
+                                        <span class="medium_14px switch-off">OFF</span>
+                                        <span class="switch-slider"></span>
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="regular_16px">4</td>
+                            <td class="regular_16px">2024-08-01 00:00:00</td>
+                            <td class="regular_16px">(Vlog) 브이로그 열세번째 이야기(모든 계획이 무산되어 장보고 집에왔다)</td>
+                            <td class="regular_16px">00:00:00</td>
+                            <td><img src="../../common/img/preview4.png" alt="Preview 1" class="preview-image"></td>
+                            <td class="regular_16px">1000</td>
+                            <td>
+                                <input class="medium_14px button-Black" type="button" value="영상시청"></button>
+                            </td>
+                            <td>
+                                <div class="switch">
+                                    <input type="checkbox" id="toggle4" />
+                                    <label for="toggle4" class="switch-label">
+                                        <span class="medium_14px switch-on">ON</span>
+                                        <span class="medium_14px switch-off">OFF</span>
+                                        <span class="switch-slider"></span>
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="regular_16px">5</td>
+                            <td class="regular_16px">2024-08-01 00:00:00</td>
+                            <td class="regular_16px">(Vlog) 브이로그 열세번째 이야기(모든 계획이 무산되어 장보고 집에왔다)</td>
+                            <td class="regular_16px">00:00:00</td>
+                            <td><img src="../../common/img/preview5.png" alt="Preview 1" class="preview-image"></td>
+                            <td class="regular_16px">1000</td>
+                            <td>
+                                <input class="medium_14px button-Black" type="button" value="영상시청"></button>
+                            </td>
+                            <td>
+                                <div class="switch">
+                                    <input type="checkbox" id="toggle5" />
+                                    <label for="toggle5" class="switch-label">
+                                        <span class="medium_14px switch-on">ON</span>
+                                        <span class="medium_14px switch-off">OFF</span>
+                                        <span class="switch-slider"></span>
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="regular_16px">6</td>
+                            <td class="regular_16px">2024-08-01 00:00:00</td>
+                            <td class="regular_16px">(Vlog) 브이로그 열세번째 이야기(모든 계획이 무산되어 장보고 집에왔다)</td>
+                            <td class="regular_16px">00:00:00</td>
+                            <td><img src="../../common/img/preview6.png" alt="Preview 1" class="preview-image"></td>
+                            <td class="regular_16px">1000</td>
+                            <td>
+                                <input class="medium_14px button-Black" type="button" value="영상시청"></button>
+                            </td>
+                            <td>
+                                <div class="switch">
+                                    <input type="checkbox" id="toggle6" />
+                                    <label for="toggle6" class="switch-label">
+                                        <span class="medium_14px switch-on">ON</span>
+                                        <span class="medium_14px switch-off">OFF</span>
+                                        <span class="switch-slider"></span>
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- 추가된 항목 -->
+                    </tbody>
+                </table>
+            </div>
+
             <!-- 페이지 네이션 -->
             <ul class="pagination">
                 <li><a href="#" class="prev">❮</a></li>
@@ -216,13 +220,20 @@
         </section>
 
     </main>
-	<script>
+    <script>
         // 문서가 로드된 후 실행할 코드
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // common.js에서 정의한 함수 호출
             setupMenuClickHandler('.leftMenuBox ul li');
+
+            const overlay = document.createElement('div');
+            overlay.classList.add('overlay');
+            overlay.onclick = toggleMenu; // overlay 클릭 시 메뉴 닫기
+            document.body.appendChild(overlay);
+
         });
     </script>
- 
+
 </body>
+
 </html>

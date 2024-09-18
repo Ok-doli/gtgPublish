@@ -12,6 +12,7 @@
     <!-- 헤더 -->
 	<header>
 		<div class="headerBox">
+            <div class="hamburger-menu bold_20px" onclick="toggleMenu()">☰</div>
 			<div class="topLogo"></div>
 			<div class="bold_14px black">Guest</div>
 		</div>
@@ -71,6 +72,11 @@
         document.addEventListener('DOMContentLoaded', function() {
             // common.js에서 정의한 함수 호출
             setupMenuClickHandler('.leftMenuBox ul li');
+
+            const overlay = document.createElement('div');
+            overlay.classList.add('overlay');
+            overlay.onclick = toggleMenu; // overlay 클릭 시 메뉴 닫기
+            document.body.appendChild(overlay);
 
         });
     </script>
