@@ -1507,7 +1507,7 @@ input:not(:checked) + .switch-label .switch-on {
 .myInfo .myInfoUpdate input[type="text"],
 .myInfo .myInfoUpdate input[type="password"],
 .myInfo .myInfoUpdate input[type="email"] {
-    width: 70%;
+    width: 100%;
     padding: 8px;
     border: 1px solid var(--Color-Gray-400);
     border-radius: 8px;
